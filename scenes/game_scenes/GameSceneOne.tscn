@@ -1,4 +1,4 @@
-[gd_scene load_steps=274 format=2]
+[gd_scene load_steps=275 format=2]
 
 [ext_resource path="res://assets/visual/game_env/skybox_cube_panorama.png" type="Texture" id=1]
 [ext_resource path="res://scenes/ui/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -269,6 +269,7 @@
 [ext_resource path="res://scenes/game_objects/TreeOneScene.tscn" type="PackedScene" id=267]
 [ext_resource path="res://scenes/game_objects/FireplaceScene.tscn" type="PackedScene" id=268]
 [ext_resource path="res://scenes/game_objects/AppleScene.tscn" type="PackedScene" id=269]
+[ext_resource path="res://scenes/game_objects/HandmadeBeehiveScene.tscn" type="PackedScene" id=270]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -1064,8 +1065,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.933, 17.577, 0 )
 
 [node name="Beehives" type="Spatial" parent="GameObjects"]
 
+[node name="HandmadeBeehive" parent="GameObjects/Beehives" instance=ExtResource( 270 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.93801, 2.00561, -5.81668 )
+
 [node name="NaturalBeehive" parent="GameObjects/Beehives" instance=ExtResource( 265 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8039, 2.26637, 8.5695 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8928, 1.08243, -42.0003 )
 
 [node name="Flowers" type="Spatial" parent="GameObjects"]
 
