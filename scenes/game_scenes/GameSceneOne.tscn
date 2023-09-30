@@ -849,6 +849,7 @@ script = ExtResource( 261 )
 [node name="natura_world_255" parent="WorldTerrain" instance=ExtResource( 250 )]
 
 [node name="WaterTerrain" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0 )
 
 [node name="natura_water" parent="WaterTerrain" instance=ExtResource( 262 )]
 transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 0, -7.7, 0 )
