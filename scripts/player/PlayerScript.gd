@@ -55,6 +55,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	transition_overlay.fade_out()
 	check_game_end()
+	tooltip.set_tooltip("Walk with [WASD]", "move_up")
 
 
 func _input(event):	
