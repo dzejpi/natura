@@ -28,7 +28,7 @@ func count_season_progress(delta):
 	if season_progress > 0:
 		season_progress -= 1 * delta
 		player.season_sprite.rotation_degrees -= (1.5 * delta)
-		print("There is " + String(season_progress) + " seconds left.")
+		#print("There is " + String(season_progress) + " seconds left.")
 	else:
 		season_progress = season_length
 		if current_season < 4:
@@ -39,7 +39,7 @@ func count_season_progress(delta):
 			current_season = 0
 			set_season_textures()
 		
-		print("Current season is: " + String(current_season))
+		#print("Current season is: " + String(current_season))
 
 
 func set_season_textures():
