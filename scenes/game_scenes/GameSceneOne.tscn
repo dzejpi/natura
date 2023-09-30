@@ -1068,3 +1068,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8039, 2.26637, 8.5695 )
 
 [node name="Flower" parent="GameObjects/Flowers" instance=ExtResource( 266 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32394, -42.8665 )
+
+[node name="Trees" type="Spatial" parent="GameObjects"]

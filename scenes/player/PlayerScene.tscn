@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/player_ui/GameOverScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player_ui/PauseScene.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://scripts/player/PlayerScript.gd" type="Script" id=5]
 [ext_resource path="res://scenes/player_ui/ToolTipScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/visual/ui/season_ui/spr_season_hand.png" type="Texture" id=7]
+[ext_resource path="res://scripts/player/Inventory.gd" type="Script" id=8]
+[ext_resource path="res://assets/visual/ui/inventory/spr_button_unselected.png" type="Texture" id=9]
+[ext_resource path="res://assets/visual/ui/inventory/spr_button_selected.png" type="Texture" id=10]
+[ext_resource path="res://assets/fonts/pixelify_sans/static/PixelifySans-Bold.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Head Bob"
@@ -70,6 +74,10 @@ tracks/1/keys = {
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.4
 
+[sub_resource type="DynamicFont" id=5]
+size = 36
+font_data = ExtResource( 11 )
+
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 5 )
@@ -127,3 +135,175 @@ position = Vector2( 48, 48 )
 texture = ExtResource( 7 )
 
 [node name="Inventory" type="Node2D" parent="UI/PlayerUI"]
+position = Vector2( 2180, 450 )
+script = ExtResource( 8 )
+
+[node name="ButtonZero" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = -312.0
+margin_right = 48.0
+margin_bottom = -264.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonZeroLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonZero"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "Empty hands"
+align = 2
+valign = 1
+
+[node name="ButtonOne" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = -248.0
+margin_right = 48.0
+margin_bottom = -200.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonOneLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonOne"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "Working tools"
+align = 2
+valign = 1
+
+[node name="ButtonTwo" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = -184.0
+margin_right = 48.0
+margin_bottom = -136.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonTwoLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonTwo"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "No flower seeds available"
+align = 2
+valign = 1
+
+[node name="ButtonThree" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = -120.0
+margin_right = 48.0
+margin_bottom = -72.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonThreeLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonThree"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "No tree seeds available"
+align = 2
+valign = 1
+
+[node name="ButtonFour" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = -56.0
+margin_right = 48.0
+margin_bottom = -8.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonFourLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonFour"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "Not enough wood for a fire"
+align = 2
+valign = 1
+
+[node name="ButtonFive" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 56.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonFiveLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonFive"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "Not enough wood for beehive"
+align = 2
+valign = 1
+
+[node name="ButtonSix" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 72.0
+margin_right = 48.0
+margin_bottom = 120.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonSixLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonSix"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "Not enough wood for shelter"
+align = 2
+valign = 1
+
+[node name="ButtonSeven" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 136.0
+margin_right = 48.0
+margin_bottom = 184.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonSevenLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonSeven"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "You don't have any honey"
+align = 2
+valign = 1
+
+[node name="ButtonEight" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 200.0
+margin_right = 48.0
+margin_bottom = 248.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonEightLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonEight"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "You don't have any berries"
+align = 2
+valign = 1
+
+[node name="ButtonNine" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 264.0
+margin_right = 48.0
+margin_bottom = 312.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
+[node name="ButtonNineLabel" type="Label" parent="UI/PlayerUI/Inventory/ButtonNine"]
+margin_left = -592.0
+margin_right = -16.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 5 )
+text = "You don't have any apples"
+align = 2
+valign = 1
