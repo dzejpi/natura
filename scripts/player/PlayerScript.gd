@@ -110,10 +110,11 @@ func _input(event):
 			handle_pause_change()
 
 
-func _process(_delta):
+func _process(delta):
 	check_game_end()
 	check_pause_update()
 	check_inventory_changes()
+	manage_hunger(delta)
 	update_info_ui()
 	
 	# If player is looking at something
@@ -128,6 +129,9 @@ func _process(_delta):
 		if collision_object != observed_object:
 			observed_object = collision_object
 			print("Player is looking at: nothing.")
+			
+	if player_health <= 0:
+		is_game_over = true
 
 
 func _physics_process(delta):
@@ -312,14 +316,18 @@ func update_info_ui():
 	wood_plank_label.text = String(wood_amount) + " wood planks"
 	
 	if player_health > 80:
-		health_label.text = "Well fed"
+		health_label.text = "Well fed" + " (" + String(round(player_health)) + "%)"
 	elif player_health > 60:
-		health_label.text = "Slightly hungry"
+		health_label.text = "Slightly hungry" + " (" + String(round(player_health)) + "%)"
 	elif player_health > 40:
-		health_label.text = "Hungry"
+		health_label.text = "Hungry" + " (" + String(round(player_health)) + "%)"
 	elif player_health > 20:
-		health_label.text = "Very hungry"
+		health_label.text = "Very hungry" + " (" + String(round(player_health)) + "%)"
 	elif player_health > 10:
-		health_label.text = "Starving"
+		health_label.text = "Starving" + " (" + String(round(player_health)) + "%)"
 	else:
-		health_label.text = "Starving to death"
+		health_label.text = "Starving to death" + " (" + String(round(player_health)) + "%)"
+
+
+func manage_hunger(delta):
+	player_health -= 0.2 * delta
