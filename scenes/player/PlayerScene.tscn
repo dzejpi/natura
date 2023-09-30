@@ -119,6 +119,7 @@ position = Vector2( 32, 32 )
 
 [node name="SeasonSprite" type="Sprite" parent="UI/PlayerUI/SeasonUINode"]
 position = Vector2( 48, 48 )
+rotation = 0.785398
 texture = ExtResource( 4 )
 
 [node name="SeasonHandwatch" type="Sprite" parent="UI/PlayerUI/SeasonUINode"]

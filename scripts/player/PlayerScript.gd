@@ -14,7 +14,7 @@ onready var player_camera = $PlayerHead/PlayerCamera
 # UI
 onready var player_ui = $UI/PlayerUI
 onready var tooltip = $UI/PlayerUI/Tooltip
-
+onready var season_sprite = $UI/PlayerUI/SeasonUINode/SeasonSprite
 
 var is_game_over = false
 var is_game_won = false
