@@ -125,3 +125,5 @@ texture = ExtResource( 4 )
 [node name="SeasonHandwatch" type="Sprite" parent="UI/PlayerUI/SeasonUINode"]
 position = Vector2( 48, 48 )
 texture = ExtResource( 7 )
+
+[node name="Inventory" type="Node2D" parent="UI/PlayerUI"]

@@ -42,6 +42,8 @@ var gravity_vector = Vector3()
 var is_on_ground = true
 var is_paused = false
 
+var inventory_item_selected = 0
+
 # Name of the observed object for debugging purposes
 var observed_object = "" 
 
@@ -98,6 +100,9 @@ func _process(_delta):
 
 
 func _physics_process(delta):
+	if Input.is_action_pressed("inventory_display"):
+		pass
+	
 	if is_on_floor():
 		gravity_vector = -get_floor_normal() * slide_prevention
 		acceleration = ground_acceleration
