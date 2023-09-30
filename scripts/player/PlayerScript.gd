@@ -20,6 +20,13 @@ onready var season_sprite = $UI/PlayerUI/SeasonUINode/SeasonSprite
 
 onready var inventory = $UI/PlayerUI/Inventory
 
+onready var info_ui = $UI/PlayerUI/InfoUI
+onready var food_label = $UI/PlayerUI/InfoUI/FoodLabel
+onready var seeds_label = $UI/PlayerUI/InfoUI/SeedsLabel
+onready var wood_plank_label = $UI/PlayerUI/InfoUI/WoodPlankLabel
+onready var health_label = $UI/PlayerUI/InfoUI/HealthLabel
+
+
 var is_game_over = false
 var is_game_won = false
 
@@ -57,9 +64,15 @@ var flower_seeds = 0
 var tree_seeds = 0
 var wood_amount = 0
 
-var honey_amount = 0
-var berries_amount = 0
-var apple_amount = 0
+var honey_amount = 2
+var berries_amount = 4
+var apple_amount = 6
+
+var honey_health = 20
+var berries_health = 20
+var apple_health = 20
+
+var player_health = 100
 
 
 func _ready():
@@ -73,6 +86,7 @@ func _ready():
 	check_game_end()
 	check_inventory_changes()
 	tooltip.set_tooltip("Walk with [WASD]", "move_up")
+	info_ui.hide()
 
 
 func _input(event):	
@@ -100,6 +114,7 @@ func _process(_delta):
 	check_game_end()
 	check_pause_update()
 	check_inventory_changes()
+	update_info_ui()
 	
 	# If player is looking at something
 	if ray.is_colliding():
@@ -154,6 +169,12 @@ func _physics_process(delta):
 	if !is_game_over && !is_game_won && !is_paused:
 		if direction != Vector3():
 			animation_player.play("Head Bob")
+	
+	if Input.is_action_just_pressed("ui_status"):
+		info_ui.show()
+		
+	if Input.is_action_just_released("ui_status"):
+		info_ui.hide()
 
 
 func check_pause_update():
@@ -259,12 +280,12 @@ func check_inventory_changes():
 				else:
 					inventory.button_four_label.text = "Not enough wood for fireplace"
 			5:
-				if wood_amount > 0:
+				if wood_amount > 2:
 					inventory.button_five_label.text = "Build beehive"
 				else:
 					inventory.button_five_label.text = "Not enough wood for beehive"
 			6:
-				if wood_amount > 0:
+				if wood_amount > 4:
 					inventory.button_six_label.text = "Build shelter"
 				else:
 					inventory.button_six_label.text = "Not enough wood for shelter"
@@ -283,3 +304,22 @@ func check_inventory_changes():
 					inventory.button_nine_label.text = "Eat apples"
 				else:
 					inventory.button_nine_label.text = "You don't have any apples"
+
+
+func update_info_ui():
+	food_label.text = String(honey_amount) + " jars of honey, " + String(apple_amount) + " apples, " + String(berries_amount) + " berries"
+	seeds_label.text = String(flower_seeds) + " flower seeds, " + String(tree_seeds) + " tree saplings"
+	wood_plank_label.text = String(wood_amount) + " wood planks"
+	
+	if player_health > 80:
+		health_label.text = "Well fed"
+	elif player_health > 60:
+		health_label.text = "Slightly hungry"
+	elif player_health > 40:
+		health_label.text = "Hungry"
+	elif player_health > 20:
+		health_label.text = "Very hungry"
+	elif player_health > 10:
+		health_label.text = "Starving"
+	else:
+		health_label.text = "Starving to death"
