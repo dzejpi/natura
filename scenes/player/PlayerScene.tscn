@@ -174,7 +174,7 @@ margin_left = -592.0
 margin_right = -16.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 5 )
-text = "Working tools"
+text = "Get axe"
 align = 2
 valign = 1
 
@@ -225,7 +225,7 @@ margin_left = -592.0
 margin_right = -16.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 5 )
-text = "Not enough wood for a fire"
+text = "Not enough wood for fireplace"
 align = 2
 valign = 1
 

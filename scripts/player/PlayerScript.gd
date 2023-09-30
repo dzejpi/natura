@@ -52,6 +52,15 @@ var current_inventory_item = 2
 # Name of the observed object for debugging purposes
 var observed_object = "" 
 
+# Amounts of items and food
+var flower_seeds = 0
+var tree_seeds = 0
+var wood_amount = 0
+
+var honey_amount = 0
+var berries_amount = 0
+var apple_amount = 0
+
 
 func _ready():
 	is_paused = false
@@ -230,22 +239,47 @@ func check_inventory_changes():
 		
 		match(current_inventory_item):
 			0:
+				# Nothing to do here
 				pass
 			1:
 				axe.show()
 			2:
-				pass
+				if flower_seeds > 0:
+					inventory.button_two_label.text = "Plant new flower"
+				else:
+					inventory.button_two_label.text = "No flower seeds"
 			3:
-				pass
+				if tree_seeds > 0:
+					inventory.button_three_label.text = "Plant new tree"
+				else:
+					inventory.button_three_label.text = "No tree saplings"
 			4:
-				pass
+				if wood_amount > 0:
+					inventory.button_four_label.text = "Build fireplace"
+				else:
+					inventory.button_four_label.text = "Not enough wood for fireplace"
 			5:
-				pass
+				if wood_amount > 0:
+					inventory.button_five_label.text = "Build beehive"
+				else:
+					inventory.button_five_label.text = "Not enough wood for beehive"
 			6:
-				pass
+				if wood_amount > 0:
+					inventory.button_six_label.text = "Build shelter"
+				else:
+					inventory.button_six_label.text = "Not enough wood for shelter"
 			7:
-				pass
+				if honey_amount > 0:
+					inventory.button_seven_label.text = "Eat honey"
+				else:
+					inventory.button_seven_label.text = "You don't have any honey"
 			8:
-				pass
+				if berries_amount > 0:
+					inventory.button_eight_label.text = "Eat berries"
+				else:
+					inventory.button_eight_label.text = "You don't have any berries"
 			9:
-				pass
+				if apple_amount > 0:
+					inventory.button_nine_label.text = "Eat apples"
+				else:
+					inventory.button_nine_label.text = "You don't have any apples"
