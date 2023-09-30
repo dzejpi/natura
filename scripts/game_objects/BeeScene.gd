@@ -3,6 +3,7 @@ extends KinematicBody
 
 onready var beehives_parent = $"../../Beehives"
 onready var flowers_parent = $"../../Flowers"
+onready var bee_animation_player = $BeeAnimationPlayer
 
 var is_carrying_honey = true
 var is_closest_beehive_found = false
@@ -14,7 +15,7 @@ var current_rotation = null
 
 
 func _ready():
-	pass
+	bee_animation_player.play("fly")
 
 
 func _process(delta):
