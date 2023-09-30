@@ -1,4 +1,4 @@
-[gd_scene load_steps=275 format=2]
+[gd_scene load_steps=273 format=2]
 
 [ext_resource path="res://assets/visual/game_env/skybox_cube_panorama.png" type="Texture" id=1]
 [ext_resource path="res://scenes/ui/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -267,9 +267,7 @@
 [ext_resource path="res://scenes/game_objects/NaturalBeehiveScene.tscn" type="PackedScene" id=265]
 [ext_resource path="res://scenes/game_objects/FlowerScene.tscn" type="PackedScene" id=266]
 [ext_resource path="res://scenes/game_objects/TreeOneScene.tscn" type="PackedScene" id=267]
-[ext_resource path="res://scenes/game_objects/FireplaceScene.tscn" type="PackedScene" id=268]
-[ext_resource path="res://scenes/game_objects/AppleScene.tscn" type="PackedScene" id=269]
-[ext_resource path="res://scenes/game_objects/HandmadeBeehiveScene.tscn" type="PackedScene" id=270]
+[ext_resource path="res://scenes/game_objects/TreeTwoScene.tscn" type="PackedScene" id=268]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -1065,11 +1063,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.933, 17.577, 0 )
 
 [node name="Beehives" type="Spatial" parent="GameObjects"]
 
-[node name="HandmadeBeehive" parent="GameObjects/Beehives" instance=ExtResource( 270 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.93801, 2.00561, -5.81668 )
-
 [node name="NaturalBeehive" parent="GameObjects/Beehives" instance=ExtResource( 265 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8928, 1.08243, -42.0003 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.949013, 6.24045, -0.627507 )
 
 [node name="Flowers" type="Spatial" parent="GameObjects"]
 
@@ -1078,13 +1073,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.32394, -42.8665 )
 
 [node name="Trees" type="Spatial" parent="GameObjects"]
 
+[node name="TreeOne7" parent="GameObjects/Trees" instance=ExtResource( 267 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4679, 0.616007, -31.0039 )
+
 [node name="TreeOne" parent="GameObjects/Trees" instance=ExtResource( 267 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.29269, 0 )
 
-[node name="Apple" parent="GameObjects/Trees" instance=ExtResource( 269 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.08197, 2.60582, 0 )
+[node name="TreeOne2" parent="GameObjects/Trees" instance=ExtResource( 268 )]
+transform = Transform( 0.820112, 0, 0.572203, 0, 1, 0, -0.572203, 0, 0.820112, 16.2306, -0.353016, 64.3857 )
+
+[node name="TreeOne3" parent="GameObjects/Trees" instance=ExtResource( 268 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.139, -0.290397, 31.4029 )
+
+[node name="TreeOne4" parent="GameObjects/Trees" instance=ExtResource( 268 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.3956, -1.73689, -83.3888 )
+
+[node name="TreeOne5" parent="GameObjects/Trees" instance=ExtResource( 268 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.9719, -5.88174, -115.036 )
+
+[node name="TreeOne6" parent="GameObjects/Trees" instance=ExtResource( 267 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.6148, -5.96597, -53.6635 )
+
+[node name="TreeOne8" parent="GameObjects/Trees" instance=ExtResource( 267 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.9801, -2.31134, -51.339 )
 
 [node name="Fireplaces" type="Spatial" parent="GameObjects"]
-
-[node name="Fireplace" parent="GameObjects/Fireplaces" instance=ExtResource( 268 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9303, 2.38428, 0 )
