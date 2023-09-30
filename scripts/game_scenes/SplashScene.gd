@@ -4,9 +4,6 @@ extends Node2D
 onready var dev_logo_sprite = $DevLogoSprite
 onready var jam_logo_sprite = $JamLogoSprite
 
-var screen_width = OS.window_size.x
-var screen_height = OS.window_size.y
-
 # Logos displayed
 var logos_displayed = 0
 var logo_display_speed = 1
@@ -28,16 +25,17 @@ var skip_splash = false
 
 
 func _ready():
+	var initial_viewport_size = get_viewport_rect().size
 	transition_overlay.fade_out()
 	
 	# Set the sprite into the center according to the window size
-	dev_logo_sprite.position.x = (screen_width / 2)
-	dev_logo_sprite.position.y = (screen_height / 2)
+	dev_logo_sprite.position.x = (initial_viewport_size.x / 2)
+	dev_logo_sprite.position.y = (initial_viewport_size.y / 2)
 	# Opacity
 	dev_logo_sprite.modulate.a = 0
 	
-	jam_logo_sprite.position.x = (screen_width / 2)
-	jam_logo_sprite.position.y = (screen_height / 2)
+	jam_logo_sprite.position.x = (initial_viewport_size.x / 2)
+	jam_logo_sprite.position.y = (initial_viewport_size.y / 2)
 	# Opacity
 	jam_logo_sprite.modulate.a = 0
 	
@@ -46,16 +44,13 @@ func _ready():
 
 
 func _process(delta):
+	var viewport_size = get_viewport_rect().size
+		
+	dev_logo_sprite.position.x = (viewport_size.x / 2)
+	dev_logo_sprite.position.y = (viewport_size.y / 2)
 	
-	# Make sure that the logo positions rerender in case user changes the window size on splash
-	screen_width = OS.window_size.x
-	screen_height = OS.window_size.y
-	
-	dev_logo_sprite.position.x = (screen_width / 2)
-	dev_logo_sprite.position.y = (screen_height / 2)
-	
-	jam_logo_sprite.position.x = (screen_width / 2)
-	jam_logo_sprite.position.y = (screen_height / 2)
+	jam_logo_sprite.position.x = (viewport_size.x / 2)
+	jam_logo_sprite.position.y = (viewport_size.y / 2)
 	
 	
 	if startup_delay:
