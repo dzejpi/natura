@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/game_scenes/SplashScene.gd" type="Script" id=2]
+[ext_resource path="res://assets/visual/ui/logos/logo-jam.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/ui/logos/logo-main.png" type="Texture" id=4]
+
+[node name="SplashScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="DevLogoSprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="JamLogoSprite" type="Sprite" parent="."]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+
+[node name="BackgroundSprite" type="Sprite" parent="."]
+centered = false
