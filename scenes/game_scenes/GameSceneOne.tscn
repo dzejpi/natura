@@ -1,4 +1,4 @@
-[gd_scene load_steps=266 format=2]
+[gd_scene load_steps=267 format=2]
 
 [ext_resource path="res://assets/visual/game_env/skybox_cube_panorama.png" type="Texture" id=1]
 [ext_resource path="res://scenes/ui/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -275,6 +275,9 @@ ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_energy = 0.0
 ambient_light_sky_contribution = 0.0
 glow_enabled = true
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 6, 16 )
 
 [node name="GameSceneOne" type="Spatial"]
 script = ExtResource( 3 )
@@ -877,3 +880,167 @@ transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, -504.675 )
 
 [node name="natura_water9" parent="WaterTerrain" instance=ExtResource( 262 )]
 transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, 500.618 )
+
+[node name="IslandWall" type="Spatial" parent="."]
+
+[node name="StaticBody" type="StaticBody" parent="IslandWall"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.977926, 0, 0.208953, 0, 1, 0, -0.208953, 0, 0.977926, 126.621, -7.0715, 0 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.993682, 0, 0.112232, 0, 1, 0, -0.112232, 0, 0.993682, 121.719, -7.0715, -30.4031 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.939603, 0, 0.342266, 0, 1, 0, -0.342266, 0, 0.939603, 119.105, -7.0715, -37.8208 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.978495, 0, -0.206272, 0, 1, 0, 0.206272, 0, 0.978495, 117.061, -7.0715, -67.991 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.884288, 0, 0.466942, 0, 1, 0, -0.466942, 0, 0.884288, 115.531, -7.0715, -93.8013 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.953085, 0, 0.302703, 0, 1, 0, -0.302703, 0, 0.953085, 103.342, -7.0715, -122.713 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape7" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.696577, 0, 0.717482, 0, 1, 0, -0.717482, 0, 0.696577, 87.177, -7.0715, -149.248 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape8" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.272297, 0, 0.962213, 0, 1, 0, -0.962213, 0, 0.272297, 60.5346, -7.0715, -164.524 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape9" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.271188, 0, 0.962526, 0, 1, 0, -0.962526, 0, -0.271188, 31.0932, -7.0715, -164.524 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape10" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.123255, 0, 0.992375, 0, 1, 0, -0.992375, 0, 0.123255, 0.36418, -7.0715, -162.058 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape11" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.0395215, 0, 0.999219, 0, 1, 0, -0.999219, 0, 0.0395215, -31.3599, -7.0715, -163.98 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape12" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.311821, 0, 0.950141, 0, 1, 0, -0.950141, 0, -0.311821, -61.8775, -7.0715, -159.951 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape13" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.669584, 0, 0.742736, 0, 1, 0, -0.742736, 0, -0.669584, -88.2084, -7.0715, -144.611 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape14" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.982752, 0, 0.184929, 0, 1, 0, -0.184929, 0, -0.982752, -101.176, -7.0715, -119.773 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape15" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.913773, 0, 0.406226, 0, 1, 0, -0.406226, 0, -0.913773, -110.283, -7.0715, -90.8709 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape16" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.951739, 0, 0.306908, 0, 1, 0, -0.306908, 0, -0.951739, -121.208, -7.0715, -62.2157 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape17" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.935179, 0, 0.354177, 0, 1, 0, -0.354177, 0, -0.935179, -131.67, -7.0715, -32.3718 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape18" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.998193, 0, 0.0600904, 0, 1, 0, -0.0600904, 0, -0.998193, -138.342, -7.0715, -1.43261 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape19" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.975745, 0, -0.21891, 0, 1, 0, 0.21891, 0, -0.975745, -135.715, -7.0715, 9.93019 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape20" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.987822, 0, 0.15559, 0, 1, 0, -0.15559, 0, -0.987822, -134.476, -7.0715, 40.3564 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape21" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.93197, 0, 0.362536, 0, 1, 0, -0.362536, 0, -0.93197, -141.985, -7.0715, 69.6459 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape22" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.93197, 0, 0.362536, 0, 1, 0, -0.362536, 0, -0.93197, -153.63, -7.0715, 99.2277 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape23" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.713238, 0, 0.700922, 0, 1, 0, -0.700922, 0, -0.713238, -170.447, -7.0715, 125.378 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape24" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.939967, 0, 0.341266, 0, 1, 0, -0.341266, 0, -0.939967, -175.271, -7.0715, 139.324 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape25" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.996579, 0, 0.0826517, 0, 1, 0, -0.0826517, 0, -0.996579, -181.53, -7.0715, 165.047 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape26" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.268853, 0, -0.963181, 0, 1, 0, 0.963181, 0, -0.268853, -169.038, -7.0715, 183.538 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape27" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.016196, 0, -0.999869, 0, 1, 0, 0.999869, 0, 0.016196, -142.301, -7.0715, 186.42 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape28" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.134868, 0, -0.990864, 0, 1, 0, 0.990864, 0, 0.134868, -110.876, -7.0715, 184.191 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape29" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.297808, 0, -0.954626, 0, 1, 0, 0.954626, 0, 0.297808, -81.1273, -7.0715, 177.702 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape30" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.903403, 0, -0.428793, 0, 1, 0, 0.428793, 0, 0.903403, -74.1115, -7.0715, 173.111 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape31" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.313296, 0, -0.949656, 0, 1, 0, 0.949656, 0, 0.313296, -52.8424, -7.0715, 154.158 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape32" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.462538, 0, -0.8866, 0, 1, 0, 0.8866, 0, 0.462538, -25.0136, -7.0715, 142.392 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape33" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.193207, 0, -0.981158, 0, 1, 0, 0.981158, 0, -0.193207, 4.09789, -7.0715, 138.234 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape34" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.065107, 0, -0.997879, 0, 1, 0, 0.997879, 0, 0.065107, 34.9303, -7.0715, 140.484 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape35" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( -0.0253046, 0, -0.99968, 0, 1, 0, 0.99968, 0, -0.0253046, 65.9079, -7.0715, 139.848 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape36" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.601941, 0, -0.798541, 0, 1, 0, 0.798541, 0, 0.601941, 92.2804, -7.0715, 130.699 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape37" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.8781, 0, -0.478478, 0, 1, 0, 0.478478, 0, 0.8781, 112.776, -7.0715, 106.998 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape38" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.836143, 0, -0.548512, 0, 1, 0, 0.548512, 0, 0.836143, 128.393, -7.0715, 81.1897 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape39" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.998736, 0, -0.0502618, 0, 1, 0, 0.0502618, 0, 0.998736, 135.466, -7.0715, 57.3342 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape40" type="CollisionShape" parent="IslandWall/StaticBody"]
+transform = Transform( 0.974531, 0, 0.224254, 0, 1, 0, -0.224254, 0, 0.974531, 132.944, -7.0715, 27.8889 )
+shape = SubResource( 5 )
