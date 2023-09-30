@@ -23,9 +23,9 @@ var speed = 6
 var jump = 6
 var gravity = 16
 
-var basic_fov = 90
-var increased_fov = 91
-var current_fov = basic_fov
+var basic_fov = 70
+var increased_fov = 90
+var current_fov = increased_fov
 
 var ground_acceleration = 8
 var air_acceleration = 2
@@ -48,8 +48,8 @@ var observed_object = ""
 
 func _ready():
 	is_paused = false
-	player_camera.fov = basic_fov
-	current_fov = basic_fov
+	player_camera.fov = current_fov
+	current_fov = increased_fov
 	pause_scene.is_game_paused = false
 	pause_scene.hide()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -118,11 +118,11 @@ func _physics_process(delta):
 		gravity_vector = Vector3.UP * jump
 
 	if Input.is_action_pressed("move_sprint"):
+		decrease_fov()
+		velocity = velocity.linear_interpolate(direction * speed * 0.25, acceleration * delta)
+	else:
 		increase_fov()
 		velocity = velocity.linear_interpolate(direction * speed * 2, acceleration * delta)
-	else:
-		decrease_fov()
-		velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
 	
 	movement.z = velocity.z + gravity_vector.z
 	movement.x = velocity.x + gravity_vector.x
@@ -194,7 +194,7 @@ func increase_fov():
 	current_fov = player_camera.fov
 	
 	if current_fov < increased_fov:
-		current_fov += 0.1
+		current_fov += 0.5
 		change_fov(current_fov)
 
 
@@ -202,7 +202,7 @@ func decrease_fov():
 	current_fov = player_camera.fov
 	
 	if current_fov > basic_fov:
-		current_fov -= 0.2
+		current_fov -= 0.5
 		change_fov(current_fov)
 
 
