@@ -69,15 +69,15 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":324,
+			"count":1102,
 			"max":[
 				0,
-				0,
+				0.015196084976196289,
 				0.25
 			],
 			"min":[
 				-0.125,
-				0,
+				0.0009804069995880127,
 				0.125
 			],
 			"type":"VEC3"
@@ -85,13 +85,13 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":324,
+			"count":1102,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":324,
+			"count":1102,
 			"type":"VEC2"
 		},
 		{
@@ -104,32 +104,32 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":3888,
+			"byteLength":13224,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3888,
-			"byteOffset":3888,
+			"byteLength":13224,
+			"byteOffset":13224,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2592,
-			"byteOffset":7776,
+			"byteLength":8816,
+			"byteOffset":26448,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":3468,
-			"byteOffset":10368,
+			"byteOffset":35264,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":13836,
+			"byteLength":38732,
 			"uri":"natura_world_137.bin"
 		}
 	]

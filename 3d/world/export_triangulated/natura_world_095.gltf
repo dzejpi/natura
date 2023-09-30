@@ -103,15 +103,15 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":48,
+			"count":121,
 			"max":[
 				-0.0625,
-				0,
+				-0.025490179657936096,
 				0.546875
 			],
 			"min":[
 				-0.125,
-				0,
+				-0.02892155945301056,
 				0.5
 			],
 			"type":"VEC3"
@@ -119,13 +119,13 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":48,
+			"count":121,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":48,
+			"count":121,
 			"type":"VEC2"
 		},
 		{
@@ -137,15 +137,15 @@
 		{
 			"bufferView":4,
 			"componentType":5126,
-			"count":292,
+			"count":447,
 			"max":[
 				0,
-				0,
+				-0.028186261653900146,
 				0.625
 			],
 			"min":[
 				-0.125,
-				0,
+				-0.0308823361992836,
 				0.5
 			],
 			"type":"VEC3"
@@ -153,13 +153,13 @@
 		{
 			"bufferView":5,
 			"componentType":5126,
-			"count":292,
+			"count":447,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":6,
 			"componentType":5126,
-			"count":292,
+			"count":447,
 			"type":"VEC2"
 		},
 		{
@@ -172,56 +172,56 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":576,
+			"byteLength":1452,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":576,
-			"byteOffset":576,
+			"byteLength":1452,
+			"byteOffset":1452,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":968,
+			"byteOffset":2904,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":384,
-			"byteOffset":1152,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":384,
-			"byteOffset":1536,
+			"byteOffset":3872,
 			"target":34963
 		},
 		{
 			"buffer":0,
-			"byteLength":3504,
-			"byteOffset":1920,
+			"byteLength":5364,
+			"byteOffset":4256,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3504,
-			"byteOffset":5424,
+			"byteLength":5364,
+			"byteOffset":9620,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2336,
-			"byteOffset":8928,
+			"byteLength":3576,
+			"byteOffset":14984,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":3084,
-			"byteOffset":11264,
+			"byteOffset":18560,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":14348,
+			"byteLength":21644,
 			"uri":"natura_world_095.bin"
 		}
 	]

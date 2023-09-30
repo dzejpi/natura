@@ -103,15 +103,15 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":323,
+			"count":725,
 			"max":[
 				-0.5,
-				0,
+				-0.024999991059303284,
 				0.625
 			],
 			"min":[
 				-0.625,
-				0,
+				-0.028676465153694153,
 				0.5
 			],
 			"type":"VEC3"
@@ -119,13 +119,13 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":323,
+			"count":725,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":323,
+			"count":725,
 			"type":"VEC2"
 		},
 		{
@@ -140,12 +140,12 @@
 			"count":4,
 			"max":[
 				-0.6171875,
-				0,
+				-0.02794116735458374,
 				0.5
 			],
 			"min":[
 				-0.625,
-				0,
+				-0.028676465153694153,
 				0.5
 			],
 			"type":"VEC3"
@@ -172,56 +172,56 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":3876,
+			"byteLength":8700,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3876,
-			"byteOffset":3876,
+			"byteLength":8700,
+			"byteOffset":8700,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2584,
-			"byteOffset":7752,
+			"byteLength":5800,
+			"byteOffset":17400,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":3456,
-			"byteOffset":10336,
+			"byteOffset":23200,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":48,
-			"byteOffset":13792,
+			"byteOffset":26656,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":48,
-			"byteOffset":13840,
+			"byteOffset":26704,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":32,
-			"byteOffset":13888,
+			"byteOffset":26752,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":12,
-			"byteOffset":13920,
+			"byteOffset":26784,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":13932,
+			"byteLength":26796,
 			"uri":"natura_world_099.bin"
 		}
 	]
