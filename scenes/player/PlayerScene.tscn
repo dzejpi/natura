@@ -102,7 +102,7 @@ collide_with_areas = true
 
 [node name="PlayerHands" type="Spatial" parent="PlayerHead"]
 
-[node name="Spatial" parent="PlayerHead/PlayerHands" instance=ExtResource( 12 )]
+[node name="Axe" parent="PlayerHead/PlayerHands" instance=ExtResource( 12 )]
 transform = Transform( 0.139577, -0.463899, 0.874824, 0.78503, 0.590312, 0.187778, -0.603528, 0.660553, 0.446569, 0.936012, -0.833546, -0.388256 )
 
 [node name="CollisionBodyCapsule" type="CollisionShape" parent="."]

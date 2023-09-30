@@ -11,10 +11,14 @@ onready var game_won_scene = $UI/GameEnd/GameWonScene
 onready var animation_player = $PlayerHead/PlayerCamera/AnimationPlayer
 onready var player_camera = $PlayerHead/PlayerCamera
 
+onready var axe = $PlayerHead/PlayerHands/Axe
+
 # UI
 onready var player_ui = $UI/PlayerUI
 onready var tooltip = $UI/PlayerUI/Tooltip
 onready var season_sprite = $UI/PlayerUI/SeasonUINode/SeasonSprite
+
+onready var inventory = $UI/PlayerUI/Inventory
 
 var is_game_over = false
 var is_game_won = false
@@ -43,6 +47,7 @@ var is_on_ground = true
 var is_paused = false
 
 var inventory_item_selected = 0
+var current_inventory_item = 2
 
 # Name of the observed object for debugging purposes
 var observed_object = "" 
@@ -57,6 +62,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	transition_overlay.fade_out()
 	check_game_end()
+	check_inventory_changes()
 	tooltip.set_tooltip("Walk with [WASD]", "move_up")
 
 
@@ -84,6 +90,7 @@ func _input(event):
 func _process(_delta):
 	check_game_end()
 	check_pause_update()
+	check_inventory_changes()
 	
 	# If player is looking at something
 	if ray.is_colliding():
@@ -213,3 +220,32 @@ func decrease_fov():
 
 func change_fov(player_current_fov):
 	player_camera.fov = player_current_fov
+
+
+func check_inventory_changes():
+	if current_inventory_item != inventory.selected_item:
+		current_inventory_item = inventory.selected_item
+		
+		axe.hide()
+		
+		match(current_inventory_item):
+			0:
+				pass
+			1:
+				axe.show()
+			2:
+				pass
+			3:
+				pass
+			4:
+				pass
+			5:
+				pass
+			6:
+				pass
+			7:
+				pass
+			8:
+				pass
+			9:
+				pass
