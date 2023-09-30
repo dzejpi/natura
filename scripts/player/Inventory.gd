@@ -36,7 +36,7 @@ func _ready():
 	change_selection()
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_mouse_button_pressed(BUTTON_RIGHT):
 		if position.x > revealed_x:
 			position.x -= reveal_speed
