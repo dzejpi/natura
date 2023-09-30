@@ -8,8 +8,9 @@ var is_carrying_honey = true
 var is_closest_beehive_found = false
 var is_closest_flower_found = false
 var current_target = null
-var bee_speed = 20
-var rotation_speed = 2.0
+var bee_speed = 10
+var rotation_speed = 100.0
+var current_rotation = null
 
 
 func _ready():
@@ -37,29 +38,6 @@ func find_closest_flower():
 				is_closest_flower_found = true
 
 
-func fly_towards_flower(delta):
-	if !is_closest_flower_found:
-		print("Looking for the closest flower.")
-		find_closest_flower()
-	else:
-		print("Flying towards the flower.")
-		var direction = current_target.global_transform.origin - global_transform.origin
-
-		# Smoothly interpolate the rotation
-		var target_rotation = direction.angle_to(Vector3(0, 1, 0))
-		var current_rotation = rotation_degrees.y
-		rotation_degrees.y = lerp(current_rotation, target_rotation, rotation_speed * delta)
-
-		# Move the bee
-		if direction.length() > 1:
-			translate(direction.normalized() * bee_speed * delta)
-		else:
-			if current_target:
-				current_target.pollen_left -= 1
-				is_carrying_honey = true
-				is_closest_flower_found = false
-
-
 func find_closest_beehive():
 	var children = beehives_parent.get_children()
 	var closest_distance = 20000
@@ -72,25 +50,41 @@ func find_closest_beehive():
 			is_closest_beehive_found = true
 
 
+func fly_towards_flower(delta):
+	if !is_closest_flower_found:
+		#print("Looking for the closest flower.")
+		find_closest_flower()
+	else:
+		#print("Flying towards the flower.")
+		#print("My rotation is: " + String(rotation_degrees))
+		var direction = current_target.global_transform.origin - global_transform.origin
+		
+		look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
+		translate(Vector3(0, 0, -bee_speed * delta))
+		
+		# Move the bee
+		if direction.length() < 1:
+			if current_target:
+				current_target.pollen_left -= 1
+				is_carrying_honey = true
+				is_closest_flower_found = false
+
+
 func fly_towards_beehive(delta):
 	if !is_closest_beehive_found:
-		print("Looking for the closest beehive.")
+		#print("Looking for the closest beehive.")
 		find_closest_beehive()
 	else:
-		print("Flying towards the beehive.")
+		#print("Flying towards the beehive.")
+		#print("My rotation is: " + String(rotation_degrees))
 		var direction = current_target.global_transform.origin - global_transform.origin
-
-		# Smoothly interpolate the rotation
-		var target_rotation = direction.angle_to(Vector3(0, 1, 0))
-		var current_rotation = rotation_degrees.y
-		rotation_degrees.y = lerp(current_rotation, target_rotation, rotation_speed * delta)
-
+		
+		look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
+		translate(Vector3(0, 0, -bee_speed * delta))
+		
 		# Move the bee
-		if direction.length() > 1:
-			translate(direction.normalized() * bee_speed * delta)
-		else:
+		if direction.length() < 1:
 			if current_target:
 				current_target.honey_grams += 1
 				is_carrying_honey = false
 				is_closest_beehive_found = false
-		

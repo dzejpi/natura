@@ -13,7 +13,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 [node name="CSGBox" type="CSGBox" parent="Placeholder"]
 
 [node name="CSGBox2" type="CSGBox" parent="Placeholder"]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1, 1, 0 )
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1, 1, -1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Placeholder"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1, 1, -1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

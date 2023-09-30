@@ -1057,7 +1057,7 @@ script = ExtResource( 263 )
 [node name="Bees" type="Spatial" parent="GameObjects"]
 
 [node name="Bee" parent="GameObjects/Bees" instance=ExtResource( 264 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.166, 18.1526, 0 )
+transform = Transform( 0.667612, 0, -0.74451, 0, 1, 0, 0.74451, 0, 0.667612, 54.166, 18.1526, 0 )
 
 [node name="Beehives" type="Spatial" parent="GameObjects"]
 
