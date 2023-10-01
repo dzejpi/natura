@@ -80,7 +80,7 @@ var honey_health = 20
 var berries_health = 20
 var apple_health = 20
 
-var player_health = 100
+var player_health = 50
 
 
 func _ready():
@@ -144,8 +144,8 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	if Input.is_action_pressed("inventory_display"):
-		pass
+	if Input.is_action_just_pressed("eat_action"):
+		process_click_action()
 	
 	if is_on_floor():
 		gravity_vector = -get_floor_normal() * slide_prevention
@@ -305,16 +305,22 @@ func check_inventory_changes():
 			7:
 				if honey_amount > 0:
 					inventory.button_seven_label.text = "Eat honey"
+					tooltip.disable_tooltip()
+					tooltip.set_tooltip("Left click to eat honey", "eat_action")
 				else:
 					inventory.button_seven_label.text = "You don't have any honey"
 			8:
 				if berries_amount > 0:
 					inventory.button_eight_label.text = "Eat berries"
+					tooltip.disable_tooltip()
+					tooltip.set_tooltip("Left click to eat honey", "eat_action")
 				else:
 					inventory.button_eight_label.text = "You don't have any berries"
 			9:
 				if apple_amount > 0:
 					inventory.button_nine_label.text = "Eat apples"
+					tooltip.disable_tooltip()
+					tooltip.set_tooltip("Left click to eat apples", "eat_action")
 				else:
 					inventory.button_nine_label.text = "You don't have any apples"
 
@@ -370,3 +376,61 @@ func adjust_placing_node():
 	if ray.is_colliding():
 		var collision_point = ray.get_collision_point()
 		placing_node.set_translation(collision_point)
+
+
+func process_click_action():
+	match current_inventory_item:
+		2:
+			if flower_seeds > 0:
+				flower_seeds -= 1
+				# instantiate flower
+				inventory.selected_item = 0
+				inventory.change_selection()
+		3:
+			if tree_seeds > 0:
+				tree_seeds -= 1
+				# instantiate tree
+				inventory.selected_item = 0
+				inventory.change_selection()
+		4:
+			if wood_amount > 0:
+				wood_amount -= 1
+				# instantiate fireplace
+				inventory.selected_item = 0
+				inventory.change_selection()
+		5:
+			if wood_amount > 2:
+				wood_amount -= 2
+				# instantiate beehive
+				inventory.selected_item = 0
+				inventory.change_selection()
+		6:
+			if wood_amount > 4:
+				wood_amount -= 4
+				# instantiate shelter
+				inventory.selected_item = 0
+				inventory.change_selection()
+		7:
+			if honey_amount > 0:
+				honey_amount -= 1
+				player_health += honey_health
+				
+				tooltip.disable_tooltip()
+				inventory.selected_item = 0
+				inventory.change_selection()
+		8:
+			if berries_amount > 0:
+				berries_amount -= 1
+				player_health += berries_health
+				
+				tooltip.disable_tooltip()
+				inventory.selected_item = 0
+				inventory.change_selection()
+		9:
+			if apple_amount > 0:
+				apple_amount -= 1
+				player_health += apple_health
+				
+				tooltip.disable_tooltip()
+				inventory.selected_item = 0
+				inventory.change_selection()

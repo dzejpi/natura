@@ -57,3 +57,8 @@ func process_flashing(delta):
 		else:
 			is_flashing_up = true
 	
+
+func disable_tooltip():
+	is_tooltip_visible = false
+	is_flashing_up = true
+	tooltip_node.modulate.a = 0
