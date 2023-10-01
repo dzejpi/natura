@@ -322,7 +322,7 @@ shape = SubResource( 1 )
 [node name="TransitionOverlay" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -78.8, -1.11018, 83.3989 )
+transform = Transform( 0.8871, 0, 0.461578, 0, 1, 0, -0.461578, 0, 0.8871, 17.1075, 1.04586, 29.932 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
@@ -344,7 +344,7 @@ light_energy = 0.5
 shadow_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 
 [node name="WorldTerrain" type="Spatial" parent="."]
-transform = Transform( 128, 0, 0, 0, 128, 0, 0, 0, 128, 0, 0, 0 )
+transform = Transform( 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0 )
 script = ExtResource( 261 )
 
 [node name="natura_world" parent="WorldTerrain" instance=ExtResource( 14 )]
@@ -860,7 +860,7 @@ script = ExtResource( 261 )
 [node name="natura_world_255" parent="WorldTerrain" instance=ExtResource( 250 )]
 
 [node name="WaterTerrain" type="Spatial" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.05, 0 )
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.05, 0 )
 
 [node name="natura_water" parent="WaterTerrain" instance=ExtResource( 262 )]
 transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 0, -7.7, 0 )
@@ -890,7 +890,7 @@ transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, -504.675 )
 transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, 500.618 )
 
 [node name="IslandWall" type="Spatial" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="IslandWall"]
 
@@ -1062,33 +1062,33 @@ script = ExtResource( 263 )
 [node name="Butterflies" type="Spatial" parent="GameObjects"]
 
 [node name="Butterfly" parent="GameObjects/Butterflies" instance=ExtResource( 269 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.71311, 9.10598, -8.44263 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7182, 9.10598, -8.44263 )
 
 [node name="Bees" type="Spatial" parent="GameObjects"]
 
 [node name="Bee" parent="GameObjects/Bees" instance=ExtResource( 264 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.933, 17.577, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9394, 17.577, -35.5175 )
 
 [node name="Beehives" type="Spatial" parent="GameObjects"]
 
 [node name="NaturalBeehive" parent="GameObjects/Beehives" instance=ExtResource( 265 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6713, 4.50366, -0.678342 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1262, 3.52532, -0.678342 )
 
 [node name="NaturalBeehive2" parent="GameObjects/Beehives" instance=ExtResource( 265 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.639, 1.2883, 37.1373 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.51, 1.2883, 40.8597 )
 
 [node name="Flowers" type="Spatial" parent="GameObjects"]
 
 [node name="Flower" parent="GameObjects/Flowers" instance=ExtResource( 266 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.861701, -14.0116 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158961, -14.0116 )
 
 [node name="Trees" type="Spatial" parent="GameObjects"]
 
 [node name="TreeOne" parent="GameObjects/Trees" instance=ExtResource( 267 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1141, 0.818666, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5689, -0.159666, 0 )
 
 [node name="TreeOne3" parent="GameObjects/Trees" instance=ExtResource( 268 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.6974, -2.54532, 35.159 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5684, -2.54532, 38.8814 )
 
 [node name="Fireplaces" type="Spatial" parent="GameObjects"]
 
@@ -1098,4 +1098,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.6974, -2.54532, 35.159 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32657 )
 
 [node name="Woodenplank" parent="GameObjects/Woodenplanks" instance=ExtResource( 270 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42059, -3.36486 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.657796, -3.36486 )
