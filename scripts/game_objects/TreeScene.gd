@@ -73,7 +73,7 @@ func collect_apple():
 
 
 func generate_planks():
-	for i in range(objects_to_generate):
+	for _i in range(objects_to_generate):
 		var original_position = self.global_transform.origin
 		
 		var x_offset = rand_range(-x_offset_range, x_offset_range)

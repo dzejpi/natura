@@ -4,7 +4,7 @@ extends StaticBody
 var plank_collected = false
 var tooltip = "Collect wooden plank"
 
-func _process(delta):
+func _process(_delta):
 	if plank_collected:
 		queue_free()
 
