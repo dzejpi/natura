@@ -17,6 +17,7 @@ position = Vector2( 800, 672 )
 margin_left = -256.0
 margin_right = 256.0
 margin_bottom = 42.0
+custom_colors/font_color = Color( 0.0941176, 0.0784314, 0.145098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Press [Space] to continue"
 align = 1

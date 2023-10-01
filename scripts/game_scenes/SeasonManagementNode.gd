@@ -12,7 +12,7 @@ var autumn_ground_color = Color(1.00, 0.68, 0.20)
 var winter_ground_color = Color(1.00, 1.00, 1.00)
 
 var current_season = 1
-var season_length = 60
+var season_length = 10
 var season_progress = season_length
 
 
