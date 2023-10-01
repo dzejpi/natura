@@ -35,6 +35,19 @@ onready var preview_fireplace = $UI/PlacingNode/Fireplace
 onready var preview_shelter = $UI/PlacingNode/Shelter
 onready var preview_tree_one = $UI/PlacingNode/TreeOne
 
+onready var world_beehives = $"../GameObjects/Beehives"
+onready var world_flowers = $"../GameObjects/Flowers"
+onready var world_trees = $"../GameObjects/Trees"
+onready var world_fireplaces = $"../GameObjects/Fireplaces"
+onready var world_shelters = $"../GameObjects/Shelters"
+
+
+
+
+
+
+
+
 var is_game_over = false
 var is_game_won = false
 
@@ -70,7 +83,7 @@ var observed_object = ""
 # Amounts of items and food
 var flower_seeds = 20
 var tree_seeds = 6
-var wood_amount = 0
+var wood_amount = 4
 
 var honey_amount = 2
 var berries_amount = 4
@@ -293,12 +306,12 @@ func check_inventory_changes():
 				else:
 					inventory.button_four_label.text = "Not enough wood for fireplace"
 			5:
-				if wood_amount > 2:
+				if wood_amount >= 2:
 					inventory.button_five_label.text = "Build beehive"
 				else:
 					inventory.button_five_label.text = "Not enough wood for beehive"
 			6:
-				if wood_amount > 4:
+				if wood_amount >= 4:
 					inventory.button_six_label.text = "Build shelter"
 				else:
 					inventory.button_six_label.text = "Not enough wood for shelter"
@@ -383,31 +396,51 @@ func process_click_action():
 		2:
 			if flower_seeds > 0:
 				flower_seeds -= 1
-				# instantiate flower
+				
+				var instance_flowers = preload("res://scenes/game_objects/FlowerScene.tscn").instance()
+				world_flowers.add_child(instance_flowers)
+				instance_flowers.global_transform.origin = ray.get_collision_point()
+				
 				inventory.selected_item = 0
 				inventory.change_selection()
 		3:
 			if tree_seeds > 0:
 				tree_seeds -= 1
-				# instantiate tree
+				
+				var instance_tree = preload("res://scenes/game_objects/TreeOneScene.tscn").instance()
+				world_trees.add_child(instance_tree)
+				instance_tree.global_transform.origin = ray.get_collision_point()
+				
 				inventory.selected_item = 0
 				inventory.change_selection()
 		4:
 			if wood_amount > 0:
 				wood_amount -= 1
-				# instantiate fireplace
+				
+				var instance_fireplace = preload("res://scenes/game_objects/FireplaceScene.tscn").instance()
+				world_fireplaces.add_child(instance_fireplace)
+				instance_fireplace.global_transform.origin = ray.get_collision_point()
+				
 				inventory.selected_item = 0
 				inventory.change_selection()
 		5:
-			if wood_amount > 2:
+			if wood_amount >= 2:
 				wood_amount -= 2
-				# instantiate beehive
+				
+				var instance_beehive = preload("res://scenes/game_objects/HandmadeBeehiveScene.tscn").instance()
+				world_beehives.add_child(instance_beehive)
+				instance_beehive.global_transform.origin = ray.get_collision_point()
+				
 				inventory.selected_item = 0
 				inventory.change_selection()
 		6:
-			if wood_amount > 4:
+			if wood_amount >= 4:
 				wood_amount -= 4
-				# instantiate shelter
+				
+				var instance_shelter = preload("res://scenes/game_objects/ShelterScene.tscn").instance()
+				world_shelters.add_child(instance_shelter)
+				instance_shelter.global_transform.origin = ray.get_collision_point()
+				
 				inventory.selected_item = 0
 				inventory.change_selection()
 		7:

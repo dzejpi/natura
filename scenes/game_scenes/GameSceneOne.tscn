@@ -1098,3 +1098,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.6148, -5.96597, -53.6635 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.9801, -2.31134, -51.339 )
 
 [node name="Fireplaces" type="Spatial" parent="GameObjects"]
+
+[node name="Shelters" type="Spatial" parent="GameObjects"]
