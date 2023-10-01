@@ -279,9 +279,11 @@ func _physics_process(delta):
 		process_click_action()
 				
 		if current_inventory_item == 1:
-			animation_player.play("Axe Swing")
-			if !(global_var.sfx_node.is_playing()):
+			if !(animation_player.current_animation == "Axe Swing"):
 				global_var.play_sound("sfx_axe_swing")
+			
+			animation_player.play("Axe Swing")
+				
 	
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		process_click_hold_action()
