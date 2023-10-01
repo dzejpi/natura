@@ -31,7 +31,7 @@ func count_season_progress(delta):
 		#print("There is " + String(season_progress) + " seconds left.")
 	else:
 		season_progress = season_length
-		if current_season < 4:
+		if current_season < 3:
 			current_season += 1
 			set_season_textures()
 		else:
