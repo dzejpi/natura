@@ -131,6 +131,57 @@ func _input(event):
 	if Input.is_action_just_pressed("game_pause"):
 		if !is_game_over && !is_game_won:
 			handle_pause_change()
+			
+	# Selecting items from inventory manually
+	if Input.is_action_just_pressed("inventory_zero"):
+		inventory.selected_item = 9
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_one"):
+		inventory.selected_item = 0
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_two"):
+		inventory.selected_item = 1
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_three"):
+		inventory.selected_item = 2
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_four"):
+		inventory.selected_item = 3
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_five"):
+		inventory.selected_item = 4
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_six"):
+		inventory.selected_item = 5
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_seven"):
+		inventory.selected_item = 6
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_eight"):
+		inventory.selected_item = 7
+		check_inventory_changes()
+		inventory.change_selection()
+		
+	if Input.is_action_just_pressed("inventory_nine"):
+		inventory.selected_item = 8
+		check_inventory_changes()
+		inventory.change_selection()
 
 
 func _process(delta):
