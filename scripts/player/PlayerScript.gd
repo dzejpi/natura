@@ -83,8 +83,8 @@ var current_inventory_item = 2
 var observed_object = "" 
 
 # Amounts of items and food
-var flower_seeds = 2
-var tree_seeds = 1
+var flower_seeds = 4
+var tree_seeds = 4
 var wood_amount = 0
 
 var honey_amount = 0
@@ -216,7 +216,7 @@ func _process(delta):
 					
 					# Get flower seeds
 					var random_value = randf()
-					if random_value <= 0.25:
+					if random_value <= 0.5:
 						flower_seeds += 1
 		
 		# Player is looking at apples
