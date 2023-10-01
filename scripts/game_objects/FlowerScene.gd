@@ -68,7 +68,7 @@ func collect_berry():
 	var berries_collected = 1
 	
 	if ripe_fruit > 0:
-		ripe_fruit -= 1
+		ripe_fruit -= 5
 		
 	if ripe_fruit == 0:
 		fruits.hide()

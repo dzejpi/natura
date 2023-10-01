@@ -4,7 +4,7 @@ extends Spatial
 onready var bees_parent = $"../../Bees"
 
 var honey_grams = 0
-var tooltip = ""
+var tooltip = "Collect honey"
 
 
 func _ready():
@@ -12,6 +12,8 @@ func _ready():
 
 
 func _process(_delta):
+	tooltip = "Collect honey (" + String(honey_grams) + ")"
+	
 	if honey_grams >= 10:
 		honey_grams -= 10
 		spawn_new_bee()
@@ -20,8 +22,6 @@ func _process(_delta):
 func get_honey():
 	var honey_amount = honey_grams
 	honey_grams = 0
-	tooltip = "Collect honey"
-	
 	return honey_amount
 
 func spawn_new_bee():

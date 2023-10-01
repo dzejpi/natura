@@ -212,7 +212,7 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_berry()
-					berries_amount += 1
+					berries_amount += 5
 					
 					# Get flower seeds
 					var random_value = randf()
@@ -225,7 +225,7 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_apple()
-					apple_amount += 1
+					apple_amount += 5
 					
 					# Get tree seeds
 					var random_value = randf()

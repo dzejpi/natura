@@ -63,10 +63,10 @@ func change_season(season):
 
 
 func collect_apple():
-	var apples_collected = 1
+	var apples_collected = 5
 	
 	if ripe_fruit > 0:
-		ripe_fruit -= 1
+		ripe_fruit -= 5
 		
 	if ripe_fruit == 0:
 		apples.hide()
