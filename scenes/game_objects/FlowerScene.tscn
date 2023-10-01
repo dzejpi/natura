@@ -6,7 +6,7 @@
 [ext_resource path="res://3d/game_objects/object_berry.glb" type="PackedScene" id=4]
 
 [sub_resource type="SphereShape" id=1]
-radius = 0.25
+radius = 0.402853
 
 [node name="Flower" type="StaticBody"]
 script = ExtResource( 1 )
