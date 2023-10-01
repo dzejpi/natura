@@ -1069,6 +1069,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7182, 9.10598, -8.44263 )
 [node name="Bee" parent="GameObjects/Bees" instance=ExtResource( 264 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9394, 17.577, -35.5175 )
 
+[node name="Bee2" parent="GameObjects/Bees" instance=ExtResource( 264 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9394, 17.577, 20.7734 )
+
 [node name="Beehives" type="Spatial" parent="GameObjects"]
 
 [node name="NaturalBeehive" parent="GameObjects/Beehives" instance=ExtResource( 265 )]

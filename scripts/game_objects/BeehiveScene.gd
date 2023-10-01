@@ -14,8 +14,8 @@ func _ready():
 func _process(_delta):
 	tooltip = "Collect honey (" + String(honey_grams) + ")"
 	
-	if honey_grams >= 8:
-		honey_grams -= 8
+	if honey_grams >= 5:
+		honey_grams -= 5
 		spawn_new_bee()
 
 
