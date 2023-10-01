@@ -26,9 +26,14 @@ func _process(delta):
 	
 func count_season_progress(delta):
 	if season_progress > 0:
-		season_progress -= 2 * delta
-		player.season_sprite.rotation_degrees -= (3 * delta)
-		#print("There is " + String(season_progress) + " seconds left.")
+		# Speed up in winter
+		if current_season == 3:
+			season_progress -= 4 * delta
+			player.season_sprite.rotation_degrees -= (6 * delta)
+			#print("There is " + String(season_progress) + " seconds left.")
+		else:
+			season_progress -= 2 * delta
+			player.season_sprite.rotation_degrees -= (3 * delta)
 	else:
 		season_progress = season_length
 		if current_season < 3:
