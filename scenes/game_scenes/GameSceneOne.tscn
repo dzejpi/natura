@@ -1,4 +1,4 @@
-[gd_scene load_steps=274 format=2]
+[gd_scene load_steps=275 format=2]
 
 [ext_resource path="res://assets/visual/game_env/skybox_cube_panorama.png" type="Texture" id=1]
 [ext_resource path="res://scenes/ui/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -269,6 +269,7 @@
 [ext_resource path="res://scenes/game_objects/TreeOneScene.tscn" type="PackedScene" id=267]
 [ext_resource path="res://scenes/game_objects/TreeTwoScene.tscn" type="PackedScene" id=268]
 [ext_resource path="res://scenes/game_objects/ButterflyScene.tscn" type="PackedScene" id=269]
+[ext_resource path="res://scenes/game_objects/WoodenPlankScene.tscn" type="PackedScene" id=270]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -1110,3 +1111,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0012, -3.04652, -51.339 )
 [node name="Fireplaces" type="Spatial" parent="GameObjects"]
 
 [node name="Shelters" type="Spatial" parent="GameObjects"]
+
+[node name="Woodenplanks" type="Spatial" parent="GameObjects"]
+
+[node name="Woodenplank" parent="GameObjects/Woodenplanks" instance=ExtResource( 270 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42059, -3.36486 )

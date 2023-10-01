@@ -177,6 +177,12 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					honey_amount += colliding_object.get_honey()
+					
+		# Player is looking at plank
+		if colliding_object.has_method("collect_plank") && current_inventory_item == 1:
+			action_tooltip.text = colliding_object.tooltip
+			if Input.is_action_just_pressed("eat_action"):
+				wood_amount += colliding_object.collect_plank()
 	else:
 		var collision_object = "nothing"
 		if collision_object != observed_object:

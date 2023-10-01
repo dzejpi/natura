@@ -5,6 +5,7 @@ onready var blossoms = $Blossoms
 onready var apples = $Fruits
 
 onready var season_management_node = $"../../../SeasonManagementNode"
+onready var woodenplanks = $"../../Woodenplanks"
 
 
 var pollen_left = 5
@@ -50,6 +51,7 @@ func change_season(season):
 		# Winter
 		3:
 			hide()
+			generate_planks()
 			blossoms.hide()
 			apples.hide()
 			ripe_fruit = 0
@@ -66,3 +68,7 @@ func collect_apple():
 		apples.hide()
 	
 	return apples_collected
+
+
+func generate_planks():
+	pass
