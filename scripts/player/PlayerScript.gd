@@ -203,12 +203,16 @@ func _process(delta):
 func _physics_process(delta):
 	if Input.is_action_just_pressed("eat_action"):
 		process_click_action()
+		
+		if current_inventory_item == 1:
+			animation_player.play("Axe Swing")
 	
 	if is_on_floor():
 		gravity_vector = -get_floor_normal() * slide_prevention
 		acceleration = ground_acceleration
 		if !is_on_ground:
-			animation_player.play("Jump Land")
+			if !(animation_player.current_animation == "Axe Swing"):
+				animation_player.play("Jump Land")
 		
 		is_on_ground = true
 	else:
@@ -238,7 +242,8 @@ func _physics_process(delta):
 	
 	if !is_game_over && !is_game_won && !is_paused:
 		if direction != Vector3():
-			animation_player.play("Head Bob")
+			if !(animation_player.current_animation == "Axe Swing"):
+				animation_player.play("Head Bob")
 	
 	#if Input.is_action_just_pressed("ui_status"):
 	#	info_ui.show()
