@@ -257,9 +257,12 @@ func _process(delta):
 func _physics_process(delta):
 	if Input.is_action_just_pressed("eat_action"):
 		process_click_action()
-		
+				
 		if current_inventory_item == 1:
 			animation_player.play("Axe Swing")
+	
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		process_click_hold_action()
 	
 	if is_on_floor():
 		gravity_vector = -get_floor_normal() * slide_prevention
@@ -579,34 +582,65 @@ func process_click_action():
 				inventory.change_selection()
 		7:
 			if honey_amount > 0:
-				honey_amount -= 1
-				player_health += honey_health
+				if player_health <= 99:
+					honey_amount -= 1
+					player_health += honey_health
 				
 				if player_health >= 100:
 					player_health = 100
 				
-				tooltip.disable_tooltip()
+				#tooltip.disable_tooltip()
 				#inventory.selected_item = 0
 				#inventory.change_selection()
 		8:
 			if berries_amount > 0:
-				berries_amount -= 1
-				player_health += berries_health
+				if player_health <= 99:
+					berries_amount -= 1
+					player_health += berries_health
 				
 				if player_health >= 100:
 					player_health = 100
 				
-				tooltip.disable_tooltip()
+				#tooltip.disable_tooltip()
 				#inventory.selected_item = 0
 				#inventory.change_selection()
 		9:
 			if apple_amount > 0:
-				apple_amount -= 1
-				player_health += apple_health
+				if player_health <= 99:
+					apple_amount -= 1
+					player_health += apple_health
 				
 				if player_health >= 100:
 					player_health = 100
 				
-				tooltip.disable_tooltip()
+				#tooltip.disable_tooltip()
 				#inventory.selected_item = 0
 				#inventory.change_selection()
+
+
+func process_click_hold_action():
+	match current_inventory_item:
+		7:
+			if honey_amount > 0:
+				if player_health <= 99:
+					honey_amount -= 1
+					player_health += honey_health
+				
+				if player_health >= 100:
+					player_health = 100
+		8:
+			if berries_amount > 0:
+				if player_health <= 99:
+					berries_amount -= 1
+					player_health += berries_health
+				
+				if player_health >= 100:
+					player_health = 100
+		9:
+			if apple_amount > 0:
+				if player_health <= 99:
+					apple_amount -= 1
+					player_health += apple_health
+				
+				if player_health >= 100:
+					player_health = 100
