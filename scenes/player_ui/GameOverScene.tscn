@@ -22,6 +22,7 @@ size = 42
 font_data = ExtResource( 8 )
 
 [node name="GameOverScene" type="Node2D"]
+position = Vector2( 0, 144 )
 
 [node name="GameOverLabel" type="Label" parent="."]
 margin_top = 32.0

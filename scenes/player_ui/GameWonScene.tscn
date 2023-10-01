@@ -23,6 +23,7 @@ size = 42
 font_data = ExtResource( 8 )
 
 [node name="GameWonScene" type="Node2D"]
+position = Vector2( 0, 144 )
 script = ExtResource( 9 )
 
 [node name="GameWonLabel" type="Label" parent="."]
