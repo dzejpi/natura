@@ -38,6 +38,7 @@ func change_season(season):
 			apples.hide()
 			tooltip = ""
 			ripe_fruit = 0
+			pollen_left = 5
 		# Summer
 		1:
 			blossoms.show()
@@ -57,6 +58,7 @@ func change_season(season):
 			blossoms.hide()
 			apples.hide()
 			ripe_fruit = 0
+			pollen_left = 0
 			tooltip = ""
 
 
