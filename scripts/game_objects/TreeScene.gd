@@ -83,3 +83,6 @@ func generate_planks():
 		
 		wooden_planks.add_child(new_plank)
 		new_plank.transform.origin = original_position + Vector3(x_offset, 0.5, z_offset)
+		
+		var random_rotation = rand_range(0, 360)
+		new_plank.transform.basis = Basis(Vector3(0, 1, 0), deg2rad(random_rotation))
