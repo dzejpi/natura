@@ -96,6 +96,8 @@ var berries_health = 0.2
 var apple_health = 0.5
 
 var player_health = 100
+var total_bee_count = 0
+var seconds_elapsed = 0
 
 
 func _ready():
@@ -192,10 +194,18 @@ func _process(delta):
 	update_info_ui()
 	adjust_placing_node()
 	
+	seconds_elapsed += 1 * delta
+	
 	if player_health < 15:
 		action_tooltip.text = "You're starving, eat something!"
 	else:
 		action_tooltip.text = ""
+		
+	if total_bee_count >= 50:
+		if !is_game_won:
+			is_game_won = true
+			game_won_scene.game_won_text = "You won! \n \n You managed to get 100 bees \n in only " + String(int(seconds_elapsed)) + " seconds!"
+			game_won_scene.update_game_won_screen()
 	
 	# If player is looking at something
 	if ray.is_colliding():
