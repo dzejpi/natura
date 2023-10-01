@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://3d/game_objects/object_shelter.glb" type="PackedScene" id=1]
+
+[node name="ShelterPreview" type="Spatial"]
+
+[node name="object_shelter" parent="." instance=ExtResource( 1 )]

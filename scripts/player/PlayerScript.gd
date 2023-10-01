@@ -34,7 +34,7 @@ onready var placing_node = $UI/PlacingNode
 onready var preview_handmade_beehive = $UI/PlacingNode/HandmadeBeehive
 onready var preview_flowers = $UI/PlacingNode/Flowers
 onready var preview_fireplace = $UI/PlacingNode/Fireplace
-onready var preview_shelter = $UI/PlacingNode/Shelter
+onready var preview_shelter = $UI/PlacingNode/ShelterPreview
 onready var preview_tree_one = $UI/PlacingNode/TreePreview
 
 onready var world_beehives = $"../GameObjects/Beehives"

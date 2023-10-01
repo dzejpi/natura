@@ -16,7 +16,7 @@
 [ext_resource path="res://scenes/game_objects/HandmadeBeehiveScene.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/game_objects/FlowersScene.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/game_objects/FireplaceScene.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/game_objects/ShelterScene.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/game_objects/ShelterPreviewScene.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/game_objects/TreePreview.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=2]
@@ -390,9 +390,8 @@ visible = false
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
 visible = false
 
-[node name="Shelter" parent="UI/PlacingNode" instance=ExtResource( 17 )]
+[node name="ShelterPreview" parent="UI/PlacingNode" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
-visible = false
 
 [node name="TreePreview" parent="UI/PlacingNode" instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
