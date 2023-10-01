@@ -68,10 +68,11 @@ tracks/1/keys = {
 script = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 6.13309, 0.665415 )
 shape = SubResource( 1 )
 
 [node name="Model" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 5.39336, 0 )
 
 [node name="object_butterfly" parent="Model" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

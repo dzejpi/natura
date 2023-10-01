@@ -1062,7 +1062,7 @@ script = ExtResource( 263 )
 [node name="Butterflies" type="Spatial" parent="GameObjects"]
 
 [node name="Butterfly" parent="GameObjects/Butterflies" instance=ExtResource( 269 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.71311, 3.28798, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.71311, 9.10598, -8.44263 )
 
 [node name="Bees" type="Spatial" parent="GameObjects"]
 
