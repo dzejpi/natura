@@ -26,6 +26,14 @@ onready var seeds_label = $UI/PlayerUI/InfoUI/SeedsLabel
 onready var wood_plank_label = $UI/PlayerUI/InfoUI/WoodPlankLabel
 onready var health_label = $UI/PlayerUI/InfoUI/HealthLabel
 
+# Placing node
+onready var placing_node = $UI/PlacingNode
+
+onready var preview_handmade_beehive = $UI/PlacingNode/HandmadeBeehive
+onready var preview_flowers = $UI/PlacingNode/Flowers
+onready var preview_fireplace = $UI/PlacingNode/Fireplace
+onready var preview_shelter = $UI/PlacingNode/Shelter
+onready var preview_tree_one = $UI/PlacingNode/TreeOne
 
 var is_game_over = false
 var is_game_won = false
@@ -60,8 +68,8 @@ var current_inventory_item = 2
 var observed_object = "" 
 
 # Amounts of items and food
-var flower_seeds = 0
-var tree_seeds = 0
+var flower_seeds = 20
+var tree_seeds = 6
 var wood_amount = 0
 
 var honey_amount = 2
@@ -116,6 +124,7 @@ func _process(delta):
 	check_inventory_changes()
 	manage_hunger(delta)
 	update_info_ui()
+	adjust_placing_node()
 	
 	# If player is looking at something
 	if ray.is_colliding():
@@ -331,3 +340,33 @@ func update_info_ui():
 
 func manage_hunger(delta):
 	player_health -= 0.2 * delta
+
+
+func adjust_placing_node():
+	# Show depending on selected item
+	if current_inventory_item >= 2 && current_inventory_item <= 6:
+		placing_node.show()
+		
+		preview_handmade_beehive.hide()
+		preview_flowers.hide()
+		preview_fireplace.hide()
+		preview_shelter.hide()
+		preview_tree_one.hide()
+		
+		match current_inventory_item:
+			2:
+				preview_flowers.show()
+			3:
+				preview_tree_one.show()
+			4:
+				preview_fireplace.show()
+			5:
+				preview_handmade_beehive.show()
+			6:
+				preview_shelter.show()
+	else:
+		placing_node.hide()
+	
+	if ray.is_colliding():
+		var collision_point = ray.get_collision_point()
+		placing_node.set_translation(collision_point)
