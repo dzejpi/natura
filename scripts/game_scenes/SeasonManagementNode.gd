@@ -6,13 +6,13 @@ onready var player = $"../Player"
 var ground_material = preload("res://3d/world/export_triangulated/ground_material.material")
 
 # Colors had to be divided by 255 and then rounded to two decimals for this to work for some reason
-var spring_ground_color = Color(0.39, 0.78, 0.30)
+var spring_ground_color = Color(0.72, 0.44, 0.31)
 var summer_ground_color = Color(0.24, 0.54, 0.28)
 var autumn_ground_color = Color(1.00, 0.68, 0.20)
 var winter_ground_color = Color(1.00, 1.00, 1.00)
 
 var current_season = 1
-var season_length = 60
+var season_length = 10
 var season_progress = season_length
 
 
