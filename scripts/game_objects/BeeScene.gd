@@ -13,6 +13,9 @@ var bee_speed = 10
 var rotation_speed = 100.0
 var current_rotation = null
 
+var bee_countdown_value = 2.0
+var bee_countdown = bee_countdown_value
+
 
 func _ready():
 	bee_animation_player.play("fly")
@@ -60,15 +63,20 @@ func fly_towards_flower(delta):
 		#print("My rotation is: " + String(rotation_degrees))
 		var direction = current_target.global_transform.origin - global_transform.origin
 		
-		look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
-		translate(Vector3(0, 0, -bee_speed * delta))
-		
 		# Move the bee
-		if direction.length() < 1:
-			if current_target:
-				current_target.pollen_left -= 1
-				is_carrying_honey = true
-				is_closest_flower_found = false
+		if direction.length() < 0.2:
+			if bee_countdown > 0:
+				bee_countdown -= 1 * delta
+			else:
+				bee_countdown = bee_countdown_value
+				
+				if current_target:
+					current_target.pollen_left -= 1
+					is_carrying_honey = true
+					is_closest_flower_found = false
+		else:
+			look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
+			translate(Vector3(0, 0, -bee_speed * delta))
 
 
 func fly_towards_beehive(delta):
@@ -80,12 +88,16 @@ func fly_towards_beehive(delta):
 		#print("My rotation is: " + String(rotation_degrees))
 		var direction = current_target.global_transform.origin - global_transform.origin
 		
-		look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
-		translate(Vector3(0, 0, -bee_speed * delta))
-		
 		# Move the bee
-		if direction.length() < 1:
-			if current_target:
-				current_target.honey_grams += 1
-				is_carrying_honey = false
-				is_closest_beehive_found = false
+		if direction.length() < 0.1:
+			if bee_countdown > 0:
+				bee_countdown -= 1 * delta
+			else:
+				bee_countdown = bee_countdown_value
+				if current_target:
+					current_target.honey_grams += 1
+					is_carrying_honey = false
+					is_closest_beehive_found = false
+		else:
+			look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
+			translate(Vector3(0, 0, -bee_speed * delta))
