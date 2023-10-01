@@ -201,11 +201,12 @@ func _process(delta):
 	else:
 		action_tooltip.text = ""
 		
-	if total_bee_count >= 50:
-		if !is_game_won:
-			is_game_won = true
-			game_won_scene.game_won_text = "You won! \n \n You managed to get 100 bees \n in only " + String(int(seconds_elapsed)) + " seconds!"
-			game_won_scene.update_game_won_screen()
+	if !global_var.endless_game:
+		if total_bee_count >= 50:
+			if !is_game_won:
+				is_game_won = true
+				game_won_scene.game_won_text = "You won! \n \n You managed to get 100 bees \n in only " + String(int(seconds_elapsed)) + " seconds!"
+				game_won_scene.update_game_won_screen()
 	
 	# If player is looking at something
 	if ray.is_colliding():

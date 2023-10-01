@@ -12,7 +12,7 @@ func _process(_delta):
 				print("An unexpected error happened when trying to switch to the Game scene.")
 
 
-func _on_NewGameButton_pressed():
+func _on_EndlessGameButton_pressed():
 	button_pressed = true
-	global_var.endless_game = false
+	global_var.endless_game = true
 	transition_overlay.fade_in()
