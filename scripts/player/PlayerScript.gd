@@ -191,8 +191,11 @@ func _process(delta):
 	manage_hunger(delta)
 	update_info_ui()
 	adjust_placing_node()
-		
-	action_tooltip.text = ""
+	
+	if player_health < 15:
+		action_tooltip.text = "You're starving, eat something!"
+	else:
+		action_tooltip.text = ""
 	
 	# If player is looking at something
 	if ray.is_colliding():
