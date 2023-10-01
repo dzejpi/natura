@@ -59,6 +59,7 @@ margin_left = -128.0
 margin_top = -80.0
 margin_right = 128.0
 margin_bottom = -16.0
+disabled = true
 toggle_mode = true
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 6 )
@@ -66,9 +67,6 @@ texture_hover = ExtResource( 5 )
 texture_disabled = ExtResource( 1 )
 texture_focused = ExtResource( 2 )
 script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MusicLabel" type="Label" parent="PauseButtons/MusicButton"]
 margin_right = 256.0

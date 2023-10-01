@@ -14,10 +14,14 @@ func _ready():
 		release_focus()
 	else:
 		music_on = true
-		music_label.text = "Music: on"
+		music_label.text = "Music: off"
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), false)
 		pressed = true
 		release_focus()
+
+
+func _process(_delta):
+	release_focus()
 
 
 func _on_MusicButton_pressed():
@@ -30,7 +34,7 @@ func _on_MusicButton_pressed():
 		release_focus()
 	else:
 		music_on = true
-		music_label.text = "Music: on"
+		music_label.text = "Music: off"
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), false)
 		pressed = true
 		release_focus()
