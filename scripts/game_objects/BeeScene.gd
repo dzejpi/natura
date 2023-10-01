@@ -42,6 +42,20 @@ func find_closest_flower():
 				is_closest_flower_found = true
 
 
+func find_furthest_flower():
+	var children = flowers_parent.get_children()
+	var closest_distance = 0
+
+	for child in children:
+		# Only look for flowers with some pollen left
+		if child.pollen_left > 0:
+			var distance = global_transform.origin.distance_to(child.global_transform.origin)
+			if distance > closest_distance:
+				closest_distance = distance
+				current_target = child
+				is_closest_flower_found = true
+
+
 func find_closest_beehive():
 	var children = beehives_parent.get_children()
 	var closest_distance = 20000
@@ -57,7 +71,12 @@ func find_closest_beehive():
 func fly_towards_flower(delta):
 	if !is_closest_flower_found:
 		#print("Looking for the closest flower.")
-		find_closest_flower()
+		var random_value = randf()
+		
+		if random_value < 0.5:
+			find_closest_flower()
+		else:
+			find_furthest_flower()
 	else:
 		#print("Flying towards the flower.")
 		#print("My rotation is: " + String(rotation_degrees))
