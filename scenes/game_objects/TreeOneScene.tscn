@@ -6,7 +6,7 @@
 [ext_resource path="res://3d/game_objects/object_apple.glb" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.25
+radius = 0.4
 height = 3.0
 
 [node name="TreeOne" type="StaticBody"]
