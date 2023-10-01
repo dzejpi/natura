@@ -481,8 +481,8 @@ func process_click_action():
 				world_flowers.add_child(instance_flowers)
 				instance_flowers.global_transform.origin = ray.get_collision_point()
 				
-				inventory.selected_item = 0
-				inventory.change_selection()
+				#inventory.selected_item = 0
+				#inventory.change_selection()
 		3:
 			if tree_seeds > 0:
 				tree_seeds -= 1
@@ -491,8 +491,8 @@ func process_click_action():
 				world_trees.add_child(instance_tree)
 				instance_tree.global_transform.origin = ray.get_collision_point()
 				
-				inventory.selected_item = 0
-				inventory.change_selection()
+				#inventory.selected_item = 0
+				#inventory.change_selection()
 		4:
 			if wood_amount > 0:
 				wood_amount -= 1
@@ -529,21 +529,21 @@ func process_click_action():
 				player_health += honey_health
 				
 				tooltip.disable_tooltip()
-				inventory.selected_item = 0
-				inventory.change_selection()
+				#inventory.selected_item = 0
+				#inventory.change_selection()
 		8:
 			if berries_amount > 0:
 				berries_amount -= 1
 				player_health += berries_health
 				
 				tooltip.disable_tooltip()
-				inventory.selected_item = 0
-				inventory.change_selection()
+				#inventory.selected_item = 0
+				#inventory.change_selection()
 		9:
 			if apple_amount > 0:
 				apple_amount -= 1
 				player_health += apple_health
 				
 				tooltip.disable_tooltip()
-				inventory.selected_item = 0
-				inventory.change_selection()
+				#inventory.selected_item = 0
+				#inventory.change_selection()
