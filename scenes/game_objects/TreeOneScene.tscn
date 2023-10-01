@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/game_objects/TreeScene.gd" type="Script" id=1]
 [ext_resource path="res://3d/game_objects/object_tree_one.glb" type="PackedScene" id=2]
+[ext_resource path="res://3d/game_objects/object_blossom.glb" type="PackedScene" id=3]
+[ext_resource path="res://3d/game_objects/object_apple.glb" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -16,3 +18,37 @@ shape = SubResource( 1 )
 
 [node name="object_tree_one" parent="." instance=ExtResource( 2 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="Blossoms" type="Spatial" parent="."]
+
+[node name="object_blossom" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.49459, 5.97015, 1.48843 )
+
+[node name="object_blossom2" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.716967, 5.7378, 1.48843 )
+
+[node name="object_blossom3" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.716967, 6.22215, -1.24212 )
+
+[node name="object_blossom4" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.57838, 6.29447, -0.711724 )
+
+[node name="object_blossom5" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.993696, 6.45465, 0.387551 )
+
+[node name="Fruits" type="Spatial" parent="."]
+
+[node name="object_apple" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.495, 5.97, 1.488 )
+
+[node name="object_apple2" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.717, 5.738, 1.488 )
+
+[node name="object_apple3" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.717, 6.222, -1.242 )
+
+[node name="object_apple4" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1.578, 6.294, -0.712 )
+
+[node name="object_apple5" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.994, 6.455, 0.388 )

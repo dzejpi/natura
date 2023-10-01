@@ -35,7 +35,7 @@ onready var preview_handmade_beehive = $UI/PlacingNode/HandmadeBeehive
 onready var preview_flowers = $UI/PlacingNode/Flowers
 onready var preview_fireplace = $UI/PlacingNode/Fireplace
 onready var preview_shelter = $UI/PlacingNode/Shelter
-onready var preview_tree_one = $UI/PlacingNode/TreeOne
+onready var preview_tree_one = $UI/PlacingNode/TreePreview
 
 onready var world_beehives = $"../GameObjects/Beehives"
 onready var world_flowers = $"../GameObjects/Flowers"
@@ -144,14 +144,29 @@ func _process(delta):
 			observed_object = collision_object
 			print("Player is looking at: " + observed_object + ".")
 			
-		# Player is looking at ripe fruit
 		var colliding_object = ray.get_collider()
+		# Player is looking at berries
 		if colliding_object.has_method("collect_berry"):
 			if colliding_object.ripe_fruit > 0:
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_berry()
 					berries_amount += 1
+		
+		# Player is looking at apples
+		if colliding_object.has_method("collect_apple"):
+			if colliding_object.ripe_fruit > 0:
+				action_tooltip.text = colliding_object.tooltip
+				if Input.is_action_just_pressed("eat_action"):
+					colliding_object.collect_apple()
+					apple_amount += 1
+		
+		# Player is looking at beehive
+		if colliding_object.has_method("get_honey"):
+			if colliding_object.honey_grams > 0:
+				action_tooltip.text = colliding_object.tooltip
+				if Input.is_action_just_pressed("eat_action"):
+					honey_amount += colliding_object.get_honey()
 	else:
 		var collision_object = "nothing"
 		if collision_object != observed_object:

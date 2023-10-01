@@ -33,25 +33,26 @@ func change_season(season):
 			blossoms.show()
 			fruits.hide()
 			tooltip = ""
-			
+			ripe_fruit = 0
 		# Summer
 		1:
 			blossoms.show()
 			fruits.hide()
 			tooltip = ""
-			
+			ripe_fruit = 0
 		# Autumn
 		2:
 			blossoms.hide()
 			fruits.show()
 			is_fruit_ripe = true
 			tooltip = "Collect berries"
-			
+			ripe_fruit = 5
 		# Winter
 		3:
 			hide()
 			blossoms.hide()
 			fruits.hide()
+			ripe_fruit = 0
 			tooltip = ""
 
 

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://3d/game_objects/object_tree_one.glb" type="PackedScene" id=1]
+
+[node name="TreePreview" type="Spatial"]
+
+[node name="object_tree_one" parent="." instance=ExtResource( 1 )]

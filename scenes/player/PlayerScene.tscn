@@ -17,7 +17,7 @@
 [ext_resource path="res://scenes/game_objects/FlowersScene.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/game_objects/FireplaceScene.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/game_objects/ShelterScene.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/game_objects/TreeOneScene.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/game_objects/TreePreview.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Head Bob"
@@ -393,6 +393,4 @@ visible = false
 [node name="Shelter" parent="UI/PlacingNode" instance=ExtResource( 17 )]
 visible = false
 
-[node name="TreeOne" parent="UI/PlacingNode" instance=ExtResource( 18 )]
-transform = Transform( 0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0 )
-visible = false
+[node name="TreePreview" parent="UI/PlacingNode" instance=ExtResource( 18 )]
