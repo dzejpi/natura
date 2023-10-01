@@ -194,6 +194,11 @@ func _process(delta):
 	update_info_ui()
 	adjust_placing_node()
 	
+	if is_game_over or is_game_won or is_paused:
+		speed = 0
+	else:
+		speed = 6
+	
 	seconds_elapsed += 1 * delta
 	
 	if player_health < 15:
@@ -202,10 +207,10 @@ func _process(delta):
 		action_tooltip.text = ""
 		
 	if !global_var.endless_game:
-		if total_bee_count >= 50:
+		if total_bee_count >= 100:
 			if !is_game_won:
 				is_game_won = true
-				game_won_scene.game_won_text = "You won! \n \n You managed to get 100 bees \n in only " + String(int(seconds_elapsed)) + " seconds!"
+				game_won_scene.game_won_text = "You won! \n \n You managed to raise 100 bees \n in only " + String(int(seconds_elapsed)) + " seconds!"
 				game_won_scene.update_game_won_screen()
 	
 	# If player is looking at something
