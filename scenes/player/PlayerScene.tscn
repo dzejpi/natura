@@ -163,7 +163,7 @@ position = Vector2( 48, 48 )
 texture = ExtResource( 7 )
 
 [node name="Inventory" type="Node2D" parent="UI/PlayerUI"]
-position = Vector2( 2180, 450 )
+position = Vector2( 1536, 450 )
 script = ExtResource( 8 )
 
 [node name="ButtonZero" type="TextureButton" parent="UI/PlayerUI/Inventory"]
@@ -179,7 +179,7 @@ margin_left = -592.0
 margin_right = -16.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 5 )
-text = "Empty hands"
+text = "Nothing"
 align = 2
 valign = 1
 
@@ -196,7 +196,7 @@ margin_left = -592.0
 margin_right = -16.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 5 )
-text = "Get axe"
+text = "Axe"
 align = 2
 valign = 1
 

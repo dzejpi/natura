@@ -364,7 +364,7 @@ func check_inventory_changes():
 				if berries_amount > 0:
 					inventory.button_eight_label.text = "Eat berries"
 					tooltip.disable_tooltip()
-					tooltip.set_tooltip("Left click to eat honey", "eat_action")
+					tooltip.set_tooltip("Left click to eat berries", "eat_action")
 				else:
 					inventory.button_eight_label.text = "You don't have any berries"
 			9:

@@ -26,7 +26,8 @@ onready var button_nine_label = $ButtonNine/ButtonNineLabel
 var is_inventory_active = false
 var selected_item = 0
 
-var hidden_x = 2180
+#var hidden_x = 2180
+var hidden_x = 1536
 var revealed_x = 1536
 
 var reveal_speed = 32
@@ -37,6 +38,7 @@ func _ready():
 
 
 func _process(_delta):
+	
 	if Input.is_mouse_button_pressed(BUTTON_RIGHT) or Input.is_action_pressed("inventory_display"):
 		if position.x > revealed_x:
 			position.x -= reveal_speed

@@ -9,6 +9,7 @@ onready var shelters = $"../../Shelters"
 
 var current_target = null
 var is_closest_tree_found = false
+var is_closest_shelter_found = false
 
 var butterfly_speed = 10
 var butterfly_countdown_value = 2.0
@@ -44,6 +45,18 @@ func find_closest_tree():
 				closest_distance = distance
 				current_target = child
 				is_closest_tree_found = true
+
+
+func find_closest_shelter():
+	var children = shelters.get_children()
+	var closest_distance = 20000
+
+	for child in children:
+		var distance = global_transform.origin.distance_to(child.global_transform.origin)
+		if distance < closest_distance:
+			closest_distance = distance
+			current_target = child
+			is_closest_shelter_found = true
 
 
 func fly_towards_tree(delta):
