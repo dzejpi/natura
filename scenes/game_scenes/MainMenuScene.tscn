@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scripts/game_scenes/MainMenuScene.gd" type="Script" id=1]
 [ext_resource path="res://scripts/buttons/CreditsButton.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/visual/ui/main_menu/menu_btn_hover.png" type="Texture" id=10]
 [ext_resource path="res://assets/visual/ui/main_menu/menu_btn_pressed.png" type="Texture" id=11]
 [ext_resource path="res://assets/fonts/pixelify_sans/static/PixelifySans-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://scenes/game_scenes/BackgroundScene.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 42
@@ -147,6 +148,10 @@ valign = 1
 [node name="Background" type="Node2D" parent="."]
 
 [node name="BackgroundSprite" type="Sprite" parent="Background"]
+
+[node name="BackgroundScene" type="Spatial" parent="."]
+
+[node name="WorldBackground" parent="BackgroundScene" instance=ExtResource( 13 )]
 
 [connection signal="pressed" from="MenuButtons/NewGameButton" to="MenuButtons/NewGameButton" method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="MenuButtons/MusicButton" to="MenuButtons/MusicButton" method="_on_MusicButton_pressed"]

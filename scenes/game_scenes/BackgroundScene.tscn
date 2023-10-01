@@ -1,0 +1,868 @@
+[gd_scene load_steps=267 format=2]
+
+[ext_resource path="res://3d/world/export_triangulated/natura_world_245.gltf" type="PackedScene" id=1]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_246.gltf" type="PackedScene" id=2]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_239.gltf" type="PackedScene" id=3]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_241.gltf" type="PackedScene" id=4]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_243.gltf" type="PackedScene" id=5]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_244.gltf" type="PackedScene" id=6]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_242.gltf" type="PackedScene" id=7]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_240.gltf" type="PackedScene" id=8]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_252.gltf" type="PackedScene" id=9]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_253.gltf" type="PackedScene" id=10]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_254.gltf" type="PackedScene" id=11]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_255.gltf" type="PackedScene" id=12]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_251.gltf" type="PackedScene" id=13]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_247.gltf" type="PackedScene" id=14]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_249.gltf" type="PackedScene" id=15]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_248.gltf" type="PackedScene" id=16]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_250.gltf" type="PackedScene" id=17]
+[ext_resource path="res://3d/world/export_water/natura_water.gltf" type="PackedScene" id=18]
+[ext_resource path="res://scripts/game_scenes/WorldTerrain.gd" type="Script" id=19]
+[ext_resource path="res://assets/visual/game_env/skybox_cube_panorama.png" type="Texture" id=20]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_115.gltf" type="PackedScene" id=21]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_102.gltf" type="PackedScene" id=22]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_116.gltf" type="PackedScene" id=23]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_117.gltf" type="PackedScene" id=24]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_094.gltf" type="PackedScene" id=25]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_100.gltf" type="PackedScene" id=26]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_109.gltf" type="PackedScene" id=27]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_081.gltf" type="PackedScene" id=28]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_105.gltf" type="PackedScene" id=29]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_121.gltf" type="PackedScene" id=30]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_111.gltf" type="PackedScene" id=31]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_124.gltf" type="PackedScene" id=32]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_097.gltf" type="PackedScene" id=33]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_104.gltf" type="PackedScene" id=34]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_106.gltf" type="PackedScene" id=35]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_125.gltf" type="PackedScene" id=36]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_089.gltf" type="PackedScene" id=37]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_091.gltf" type="PackedScene" id=38]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_113.gltf" type="PackedScene" id=39]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_122.gltf" type="PackedScene" id=40]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_126.gltf" type="PackedScene" id=41]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_127.gltf" type="PackedScene" id=42]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_129.gltf" type="PackedScene" id=43]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_095.gltf" type="PackedScene" id=44]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_130.gltf" type="PackedScene" id=45]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_093.gltf" type="PackedScene" id=46]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_103.gltf" type="PackedScene" id=47]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_112.gltf" type="PackedScene" id=48]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_132.gltf" type="PackedScene" id=49]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_134.gltf" type="PackedScene" id=50]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_135.gltf" type="PackedScene" id=51]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_108.gltf" type="PackedScene" id=52]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_120.gltf" type="PackedScene" id=53]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_083.gltf" type="PackedScene" id=54]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_084.gltf" type="PackedScene" id=55]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_110.gltf" type="PackedScene" id=56]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_133.gltf" type="PackedScene" id=57]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_136.gltf" type="PackedScene" id=58]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_137.gltf" type="PackedScene" id=59]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_138.gltf" type="PackedScene" id=60]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_096.gltf" type="PackedScene" id=61]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_114.gltf" type="PackedScene" id=62]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_078.gltf" type="PackedScene" id=63]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_099.gltf" type="PackedScene" id=64]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_119.gltf" type="PackedScene" id=65]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_123.gltf" type="PackedScene" id=66]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_131.gltf" type="PackedScene" id=67]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_087.gltf" type="PackedScene" id=68]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_079.gltf" type="PackedScene" id=69]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_090.gltf" type="PackedScene" id=70]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_101.gltf" type="PackedScene" id=71]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_139.gltf" type="PackedScene" id=72]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_140.gltf" type="PackedScene" id=73]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_118.gltf" type="PackedScene" id=74]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_141.gltf" type="PackedScene" id=75]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_086.gltf" type="PackedScene" id=76]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_128.gltf" type="PackedScene" id=77]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_085.gltf" type="PackedScene" id=78]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_080.gltf" type="PackedScene" id=79]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_088.gltf" type="PackedScene" id=80]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_092.gltf" type="PackedScene" id=81]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_082.gltf" type="PackedScene" id=82]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_098.gltf" type="PackedScene" id=83]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_107.gltf" type="PackedScene" id=84]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_049.gltf" type="PackedScene" id=85]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_050.gltf" type="PackedScene" id=86]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_033.gltf" type="PackedScene" id=87]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_002.gltf" type="PackedScene" id=88]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_006.gltf" type="PackedScene" id=89]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_012.gltf" type="PackedScene" id=90]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_019.gltf" type="PackedScene" id=91]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_031.gltf" type="PackedScene" id=92]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_008.gltf" type="PackedScene" id=93]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_038.gltf" type="PackedScene" id=94]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_040.gltf" type="PackedScene" id=95]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_043.gltf" type="PackedScene" id=96]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_001.gltf" type="PackedScene" id=97]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_007.gltf" type="PackedScene" id=98]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_011.gltf" type="PackedScene" id=99]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_018.gltf" type="PackedScene" id=100]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_029.gltf" type="PackedScene" id=101]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_051.gltf" type="PackedScene" id=102]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_004.gltf" type="PackedScene" id=103]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_017.gltf" type="PackedScene" id=104]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_036.gltf" type="PackedScene" id=105]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_039.gltf" type="PackedScene" id=106]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_042.gltf" type="PackedScene" id=107]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_048.gltf" type="PackedScene" id=108]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_013.gltf" type="PackedScene" id=109]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_041.gltf" type="PackedScene" id=110]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_052.gltf" type="PackedScene" id=111]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_014.gltf" type="PackedScene" id=112]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_005.gltf" type="PackedScene" id=113]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_046.gltf" type="PackedScene" id=114]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_028.gltf" type="PackedScene" id=115]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_035.gltf" type="PackedScene" id=116]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_053.gltf" type="PackedScene" id=117]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_026.gltf" type="PackedScene" id=118]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_016.gltf" type="PackedScene" id=119]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_023.gltf" type="PackedScene" id=120]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_054.gltf" type="PackedScene" id=121]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_022.gltf" type="PackedScene" id=122]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_009.gltf" type="PackedScene" id=123]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_021.gltf" type="PackedScene" id=124]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_025.gltf" type="PackedScene" id=125]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_045.gltf" type="PackedScene" id=126]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_027.gltf" type="PackedScene" id=127]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_020.gltf" type="PackedScene" id=128]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_015.gltf" type="PackedScene" id=129]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_030.gltf" type="PackedScene" id=130]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_032.gltf" type="PackedScene" id=131]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_037.gltf" type="PackedScene" id=132]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_010.gltf" type="PackedScene" id=133]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_003.gltf" type="PackedScene" id=134]
+[ext_resource path="res://3d/world/export_triangulated/natura_world.gltf" type="PackedScene" id=135]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_024.gltf" type="PackedScene" id=136]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_034.gltf" type="PackedScene" id=137]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_044.gltf" type="PackedScene" id=138]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_047.gltf" type="PackedScene" id=139]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_073.gltf" type="PackedScene" id=140]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_069.gltf" type="PackedScene" id=141]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_064.gltf" type="PackedScene" id=142]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_066.gltf" type="PackedScene" id=143]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_057.gltf" type="PackedScene" id=144]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_067.gltf" type="PackedScene" id=145]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_076.gltf" type="PackedScene" id=146]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_077.gltf" type="PackedScene" id=147]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_070.gltf" type="PackedScene" id=148]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_071.gltf" type="PackedScene" id=149]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_075.gltf" type="PackedScene" id=150]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_058.gltf" type="PackedScene" id=151]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_055.gltf" type="PackedScene" id=152]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_059.gltf" type="PackedScene" id=153]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_060.gltf" type="PackedScene" id=154]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_056.gltf" type="PackedScene" id=155]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_063.gltf" type="PackedScene" id=156]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_062.gltf" type="PackedScene" id=157]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_061.gltf" type="PackedScene" id=158]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_065.gltf" type="PackedScene" id=159]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_072.gltf" type="PackedScene" id=160]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_068.gltf" type="PackedScene" id=161]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_074.gltf" type="PackedScene" id=162]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_143.gltf" type="PackedScene" id=163]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_144.gltf" type="PackedScene" id=164]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_150.gltf" type="PackedScene" id=165]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_151.gltf" type="PackedScene" id=166]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_153.gltf" type="PackedScene" id=167]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_154.gltf" type="PackedScene" id=168]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_155.gltf" type="PackedScene" id=169]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_152.gltf" type="PackedScene" id=170]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_156.gltf" type="PackedScene" id=171]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_159.gltf" type="PackedScene" id=172]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_157.gltf" type="PackedScene" id=173]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_158.gltf" type="PackedScene" id=174]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_160.gltf" type="PackedScene" id=175]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_147.gltf" type="PackedScene" id=176]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_148.gltf" type="PackedScene" id=177]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_142.gltf" type="PackedScene" id=178]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_145.gltf" type="PackedScene" id=179]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_146.gltf" type="PackedScene" id=180]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_149.gltf" type="PackedScene" id=181]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_205.gltf" type="PackedScene" id=182]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_171.gltf" type="PackedScene" id=183]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_175.gltf" type="PackedScene" id=184]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_193.gltf" type="PackedScene" id=185]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_206.gltf" type="PackedScene" id=186]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_207.gltf" type="PackedScene" id=187]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_208.gltf" type="PackedScene" id=188]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_199.gltf" type="PackedScene" id=189]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_183.gltf" type="PackedScene" id=190]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_197.gltf" type="PackedScene" id=191]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_185.gltf" type="PackedScene" id=192]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_187.gltf" type="PackedScene" id=193]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_209.gltf" type="PackedScene" id=194]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_210.gltf" type="PackedScene" id=195]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_211.gltf" type="PackedScene" id=196]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_212.gltf" type="PackedScene" id=197]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_191.gltf" type="PackedScene" id=198]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_202.gltf" type="PackedScene" id=199]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_203.gltf" type="PackedScene" id=200]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_213.gltf" type="PackedScene" id=201]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_167.gltf" type="PackedScene" id=202]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_214.gltf" type="PackedScene" id=203]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_215.gltf" type="PackedScene" id=204]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_164.gltf" type="PackedScene" id=205]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_168.gltf" type="PackedScene" id=206]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_173.gltf" type="PackedScene" id=207]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_170.gltf" type="PackedScene" id=208]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_177.gltf" type="PackedScene" id=209]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_172.gltf" type="PackedScene" id=210]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_178.gltf" type="PackedScene" id=211]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_162.gltf" type="PackedScene" id=212]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_179.gltf" type="PackedScene" id=213]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_180.gltf" type="PackedScene" id=214]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_182.gltf" type="PackedScene" id=215]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_188.gltf" type="PackedScene" id=216]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_186.gltf" type="PackedScene" id=217]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_194.gltf" type="PackedScene" id=218]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_198.gltf" type="PackedScene" id=219]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_200.gltf" type="PackedScene" id=220]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_163.gltf" type="PackedScene" id=221]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_174.gltf" type="PackedScene" id=222]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_189.gltf" type="PackedScene" id=223]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_165.gltf" type="PackedScene" id=224]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_169.gltf" type="PackedScene" id=225]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_181.gltf" type="PackedScene" id=226]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_176.gltf" type="PackedScene" id=227]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_184.gltf" type="PackedScene" id=228]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_195.gltf" type="PackedScene" id=229]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_204.gltf" type="PackedScene" id=230]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_161.gltf" type="PackedScene" id=231]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_166.gltf" type="PackedScene" id=232]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_190.gltf" type="PackedScene" id=233]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_196.gltf" type="PackedScene" id=234]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_192.gltf" type="PackedScene" id=235]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_201.gltf" type="PackedScene" id=236]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_230.gltf" type="PackedScene" id=237]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_231.gltf" type="PackedScene" id=238]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_232.gltf" type="PackedScene" id=239]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_227.gltf" type="PackedScene" id=240]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_225.gltf" type="PackedScene" id=241]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_218.gltf" type="PackedScene" id=242]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_228.gltf" type="PackedScene" id=243]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_234.gltf" type="PackedScene" id=244]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_217.gltf" type="PackedScene" id=245]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_222.gltf" type="PackedScene" id=246]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_235.gltf" type="PackedScene" id=247]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_233.gltf" type="PackedScene" id=248]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_224.gltf" type="PackedScene" id=249]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_229.gltf" type="PackedScene" id=250]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_226.gltf" type="PackedScene" id=251]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_236.gltf" type="PackedScene" id=252]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_237.gltf" type="PackedScene" id=253]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_238.gltf" type="PackedScene" id=254]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_220.gltf" type="PackedScene" id=255]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_216.gltf" type="PackedScene" id=256]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_219.gltf" type="PackedScene" id=257]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_221.gltf" type="PackedScene" id=258]
+[ext_resource path="res://3d/world/export_triangulated/natura_world_223.gltf" type="PackedScene" id=259]
+[ext_resource path="res://3d/game_objects/object_tree_one.glb" type="PackedScene" id=260]
+[ext_resource path="res://3d/game_objects/object_tree_two.glb" type="PackedScene" id=261]
+[ext_resource path="res://3d/game_objects/object_apple.glb" type="PackedScene" id=262]
+[ext_resource path="res://3d/game_objects/object_beehive_handmade.glb" type="PackedScene" id=263]
+[ext_resource path="res://3d/game_objects/object_axe.glb" type="PackedScene" id=264]
+
+[sub_resource type="PanoramaSky" id=4]
+panorama = ExtResource( 20 )
+
+[sub_resource type="Environment" id=5]
+background_mode = 2
+background_sky = SubResource( 4 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.0
+glow_enabled = true
+
+[node name="WorldBackground" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
+
+[node name="DirectionalLightMain" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( 0.808503, -0.264936, -0.525483, 0.241845, -0.664463, 0.707107, -0.536502, -0.698783, -0.473147, 0, 25, 0 )
+light_color = Color( 0.647059, 0.839216, 0.945098, 1 )
+light_energy = 1.25
+shadow_color = Color( 0.709804, 0.709804, 0.709804, 1 )
+shadow_bias = 0.05
+directional_shadow_mode = 1
+directional_shadow_normal_bias = 0.0
+directional_shadow_depth_range = 1
+
+[node name="DirectionalLightSecondary" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( 0.851224, -0.0384006, 0.523395, -0.0516916, 0.986335, 0.156434, -0.52225, -0.160216, 0.837607, 0, 20, 0 )
+light_color = Color( 0.647059, 0.839216, 0.945098, 1 )
+light_energy = 0.5
+shadow_color = Color( 0.709804, 0.709804, 0.709804, 1 )
+
+[node name="WorldTerrain" type="Spatial" parent="."]
+transform = Transform( 128, 0, 0, 0, 128, 0, 0, 0, 128, 0, 0, 0 )
+script = ExtResource( 19 )
+
+[node name="natura_world" parent="WorldTerrain" instance=ExtResource( 135 )]
+
+[node name="natura_world_001" parent="WorldTerrain" instance=ExtResource( 97 )]
+
+[node name="natura_world_002" parent="WorldTerrain" instance=ExtResource( 88 )]
+
+[node name="natura_world_003" parent="WorldTerrain" instance=ExtResource( 134 )]
+
+[node name="natura_world_004" parent="WorldTerrain" instance=ExtResource( 103 )]
+
+[node name="natura_world_005" parent="WorldTerrain" instance=ExtResource( 113 )]
+
+[node name="natura_world_006" parent="WorldTerrain" instance=ExtResource( 89 )]
+
+[node name="natura_world_007" parent="WorldTerrain" instance=ExtResource( 98 )]
+
+[node name="natura_world_008" parent="WorldTerrain" instance=ExtResource( 93 )]
+
+[node name="natura_world_009" parent="WorldTerrain" instance=ExtResource( 123 )]
+
+[node name="natura_world_010" parent="WorldTerrain" instance=ExtResource( 133 )]
+
+[node name="natura_world_011" parent="WorldTerrain" instance=ExtResource( 99 )]
+
+[node name="natura_world_012" parent="WorldTerrain" instance=ExtResource( 90 )]
+
+[node name="natura_world_013" parent="WorldTerrain" instance=ExtResource( 109 )]
+
+[node name="natura_world_014" parent="WorldTerrain" instance=ExtResource( 112 )]
+
+[node name="natura_world_015" parent="WorldTerrain" instance=ExtResource( 129 )]
+
+[node name="natura_world_016" parent="WorldTerrain" instance=ExtResource( 119 )]
+
+[node name="natura_world_017" parent="WorldTerrain" instance=ExtResource( 104 )]
+
+[node name="natura_world_018" parent="WorldTerrain" instance=ExtResource( 100 )]
+
+[node name="natura_world_019" parent="WorldTerrain" instance=ExtResource( 91 )]
+
+[node name="natura_world_020" parent="WorldTerrain" instance=ExtResource( 128 )]
+
+[node name="natura_world_021" parent="WorldTerrain" instance=ExtResource( 124 )]
+
+[node name="natura_world_022" parent="WorldTerrain" instance=ExtResource( 122 )]
+
+[node name="natura_world_023" parent="WorldTerrain" instance=ExtResource( 120 )]
+
+[node name="natura_world_024" parent="WorldTerrain" instance=ExtResource( 136 )]
+
+[node name="natura_world_025" parent="WorldTerrain" instance=ExtResource( 125 )]
+
+[node name="natura_world_026" parent="WorldTerrain" instance=ExtResource( 118 )]
+
+[node name="natura_world_027" parent="WorldTerrain" instance=ExtResource( 127 )]
+
+[node name="natura_world_028" parent="WorldTerrain" instance=ExtResource( 115 )]
+
+[node name="natura_world_029" parent="WorldTerrain" instance=ExtResource( 101 )]
+
+[node name="natura_world_030" parent="WorldTerrain" instance=ExtResource( 130 )]
+
+[node name="natura_world_031" parent="WorldTerrain" instance=ExtResource( 92 )]
+
+[node name="natura_world_032" parent="WorldTerrain" instance=ExtResource( 131 )]
+
+[node name="natura_world_033" parent="WorldTerrain" instance=ExtResource( 87 )]
+
+[node name="natura_world_034" parent="WorldTerrain" instance=ExtResource( 137 )]
+
+[node name="natura_world_035" parent="WorldTerrain" instance=ExtResource( 116 )]
+
+[node name="natura_world_036" parent="WorldTerrain" instance=ExtResource( 105 )]
+
+[node name="natura_world_037" parent="WorldTerrain" instance=ExtResource( 132 )]
+
+[node name="natura_world_038" parent="WorldTerrain" instance=ExtResource( 94 )]
+
+[node name="natura_world_039" parent="WorldTerrain" instance=ExtResource( 106 )]
+
+[node name="natura_world_040" parent="WorldTerrain" instance=ExtResource( 95 )]
+
+[node name="natura_world_041" parent="WorldTerrain" instance=ExtResource( 110 )]
+
+[node name="natura_world_042" parent="WorldTerrain" instance=ExtResource( 107 )]
+
+[node name="natura_world_043" parent="WorldTerrain" instance=ExtResource( 96 )]
+
+[node name="natura_world_044" parent="WorldTerrain" instance=ExtResource( 138 )]
+
+[node name="natura_world_045" parent="WorldTerrain" instance=ExtResource( 126 )]
+
+[node name="natura_world_046" parent="WorldTerrain" instance=ExtResource( 114 )]
+
+[node name="natura_world_047" parent="WorldTerrain" instance=ExtResource( 139 )]
+
+[node name="natura_world_048" parent="WorldTerrain" instance=ExtResource( 108 )]
+
+[node name="natura_world_049" parent="WorldTerrain" instance=ExtResource( 85 )]
+
+[node name="natura_world_050" parent="WorldTerrain" instance=ExtResource( 86 )]
+
+[node name="natura_world_051" parent="WorldTerrain" instance=ExtResource( 102 )]
+
+[node name="natura_world_052" parent="WorldTerrain" instance=ExtResource( 111 )]
+
+[node name="natura_world_053" parent="WorldTerrain" instance=ExtResource( 117 )]
+
+[node name="natura_world_054" parent="WorldTerrain" instance=ExtResource( 121 )]
+
+[node name="natura_world_055" parent="WorldTerrain" instance=ExtResource( 152 )]
+
+[node name="natura_world_056" parent="WorldTerrain" instance=ExtResource( 155 )]
+
+[node name="natura_world_057" parent="WorldTerrain" instance=ExtResource( 144 )]
+
+[node name="natura_world_058" parent="WorldTerrain" instance=ExtResource( 151 )]
+
+[node name="natura_world_059" parent="WorldTerrain" instance=ExtResource( 153 )]
+
+[node name="natura_world_060" parent="WorldTerrain" instance=ExtResource( 154 )]
+
+[node name="natura_world_061" parent="WorldTerrain" instance=ExtResource( 158 )]
+
+[node name="natura_world_062" parent="WorldTerrain" instance=ExtResource( 157 )]
+
+[node name="natura_world_063" parent="WorldTerrain" instance=ExtResource( 156 )]
+
+[node name="natura_world_064" parent="WorldTerrain" instance=ExtResource( 142 )]
+
+[node name="natura_world_065" parent="WorldTerrain" instance=ExtResource( 159 )]
+
+[node name="natura_world_066" parent="WorldTerrain" instance=ExtResource( 143 )]
+
+[node name="natura_world_067" parent="WorldTerrain" instance=ExtResource( 145 )]
+
+[node name="natura_world_068" parent="WorldTerrain" instance=ExtResource( 161 )]
+
+[node name="natura_world_069" parent="WorldTerrain" instance=ExtResource( 141 )]
+
+[node name="natura_world_070" parent="WorldTerrain" instance=ExtResource( 148 )]
+
+[node name="natura_world_071" parent="WorldTerrain" instance=ExtResource( 149 )]
+
+[node name="natura_world_072" parent="WorldTerrain" instance=ExtResource( 160 )]
+
+[node name="natura_world_073" parent="WorldTerrain" instance=ExtResource( 140 )]
+
+[node name="natura_world_074" parent="WorldTerrain" instance=ExtResource( 162 )]
+
+[node name="natura_world_075" parent="WorldTerrain" instance=ExtResource( 150 )]
+
+[node name="natura_world_076" parent="WorldTerrain" instance=ExtResource( 146 )]
+
+[node name="natura_world_077" parent="WorldTerrain" instance=ExtResource( 147 )]
+
+[node name="natura_world_078" parent="WorldTerrain" instance=ExtResource( 63 )]
+
+[node name="natura_world_079" parent="WorldTerrain" instance=ExtResource( 69 )]
+
+[node name="natura_world_080" parent="WorldTerrain" instance=ExtResource( 79 )]
+
+[node name="natura_world_081" parent="WorldTerrain" instance=ExtResource( 28 )]
+
+[node name="natura_world_082" parent="WorldTerrain" instance=ExtResource( 82 )]
+
+[node name="natura_world_083" parent="WorldTerrain" instance=ExtResource( 54 )]
+
+[node name="natura_world_084" parent="WorldTerrain" instance=ExtResource( 55 )]
+
+[node name="natura_world_085" parent="WorldTerrain" instance=ExtResource( 78 )]
+
+[node name="natura_world_086" parent="WorldTerrain" instance=ExtResource( 76 )]
+
+[node name="natura_world_087" parent="WorldTerrain" instance=ExtResource( 68 )]
+
+[node name="natura_world_088" parent="WorldTerrain" instance=ExtResource( 80 )]
+
+[node name="natura_world_089" parent="WorldTerrain" instance=ExtResource( 37 )]
+
+[node name="natura_world_090" parent="WorldTerrain" instance=ExtResource( 70 )]
+
+[node name="natura_world_091" parent="WorldTerrain" instance=ExtResource( 38 )]
+
+[node name="natura_world_092" parent="WorldTerrain" instance=ExtResource( 81 )]
+
+[node name="natura_world_093" parent="WorldTerrain" instance=ExtResource( 46 )]
+
+[node name="natura_world_094" parent="WorldTerrain" instance=ExtResource( 25 )]
+
+[node name="natura_world_095" parent="WorldTerrain" instance=ExtResource( 44 )]
+
+[node name="natura_world_096" parent="WorldTerrain" instance=ExtResource( 61 )]
+
+[node name="natura_world_097" parent="WorldTerrain" instance=ExtResource( 33 )]
+
+[node name="natura_world_098" parent="WorldTerrain" instance=ExtResource( 83 )]
+
+[node name="natura_world_099" parent="WorldTerrain" instance=ExtResource( 64 )]
+
+[node name="natura_world_100" parent="WorldTerrain" instance=ExtResource( 26 )]
+
+[node name="natura_world_101" parent="WorldTerrain" instance=ExtResource( 71 )]
+
+[node name="natura_world_102" parent="WorldTerrain" instance=ExtResource( 22 )]
+
+[node name="natura_world_103" parent="WorldTerrain" instance=ExtResource( 47 )]
+
+[node name="natura_world_104" parent="WorldTerrain" instance=ExtResource( 34 )]
+
+[node name="natura_world_105" parent="WorldTerrain" instance=ExtResource( 29 )]
+
+[node name="natura_world_106" parent="WorldTerrain" instance=ExtResource( 35 )]
+
+[node name="natura_world_107" parent="WorldTerrain" instance=ExtResource( 84 )]
+
+[node name="natura_world_108" parent="WorldTerrain" instance=ExtResource( 52 )]
+
+[node name="natura_world_109" parent="WorldTerrain" instance=ExtResource( 27 )]
+
+[node name="natura_world_110" parent="WorldTerrain" instance=ExtResource( 56 )]
+
+[node name="natura_world_111" parent="WorldTerrain" instance=ExtResource( 31 )]
+
+[node name="natura_world_112" parent="WorldTerrain" instance=ExtResource( 48 )]
+
+[node name="natura_world_113" parent="WorldTerrain" instance=ExtResource( 39 )]
+
+[node name="natura_world_114" parent="WorldTerrain" instance=ExtResource( 62 )]
+
+[node name="natura_world_115" parent="WorldTerrain" instance=ExtResource( 21 )]
+
+[node name="natura_world_116" parent="WorldTerrain" instance=ExtResource( 23 )]
+
+[node name="natura_world_117" parent="WorldTerrain" instance=ExtResource( 24 )]
+
+[node name="natura_world_118" parent="WorldTerrain" instance=ExtResource( 74 )]
+
+[node name="natura_world_119" parent="WorldTerrain" instance=ExtResource( 65 )]
+
+[node name="natura_world_120" parent="WorldTerrain" instance=ExtResource( 53 )]
+
+[node name="natura_world_121" parent="WorldTerrain" instance=ExtResource( 30 )]
+
+[node name="natura_world_122" parent="WorldTerrain" instance=ExtResource( 40 )]
+
+[node name="natura_world_123" parent="WorldTerrain" instance=ExtResource( 66 )]
+
+[node name="natura_world_124" parent="WorldTerrain" instance=ExtResource( 32 )]
+
+[node name="natura_world_125" parent="WorldTerrain" instance=ExtResource( 36 )]
+
+[node name="natura_world_126" parent="WorldTerrain" instance=ExtResource( 41 )]
+
+[node name="natura_world_127" parent="WorldTerrain" instance=ExtResource( 42 )]
+
+[node name="natura_world_128" parent="WorldTerrain" instance=ExtResource( 77 )]
+
+[node name="natura_world_129" parent="WorldTerrain" instance=ExtResource( 43 )]
+
+[node name="natura_world_130" parent="WorldTerrain" instance=ExtResource( 45 )]
+
+[node name="natura_world_131" parent="WorldTerrain" instance=ExtResource( 67 )]
+
+[node name="natura_world_132" parent="WorldTerrain" instance=ExtResource( 49 )]
+
+[node name="natura_world_133" parent="WorldTerrain" instance=ExtResource( 57 )]
+
+[node name="natura_world_134" parent="WorldTerrain" instance=ExtResource( 50 )]
+
+[node name="natura_world_135" parent="WorldTerrain" instance=ExtResource( 51 )]
+
+[node name="natura_world_136" parent="WorldTerrain" instance=ExtResource( 58 )]
+
+[node name="natura_world_137" parent="WorldTerrain" instance=ExtResource( 59 )]
+
+[node name="natura_world_138" parent="WorldTerrain" instance=ExtResource( 60 )]
+
+[node name="natura_world_139" parent="WorldTerrain" instance=ExtResource( 72 )]
+
+[node name="natura_world_140" parent="WorldTerrain" instance=ExtResource( 73 )]
+
+[node name="natura_world_141" parent="WorldTerrain" instance=ExtResource( 75 )]
+
+[node name="natura_world_142" parent="WorldTerrain" instance=ExtResource( 178 )]
+
+[node name="natura_world_143" parent="WorldTerrain" instance=ExtResource( 163 )]
+
+[node name="natura_world_144" parent="WorldTerrain" instance=ExtResource( 164 )]
+
+[node name="natura_world_145" parent="WorldTerrain" instance=ExtResource( 179 )]
+
+[node name="natura_world_146" parent="WorldTerrain" instance=ExtResource( 180 )]
+
+[node name="natura_world_147" parent="WorldTerrain" instance=ExtResource( 176 )]
+
+[node name="natura_world_148" parent="WorldTerrain" instance=ExtResource( 177 )]
+
+[node name="natura_world_149" parent="WorldTerrain" instance=ExtResource( 181 )]
+
+[node name="natura_world_150" parent="WorldTerrain" instance=ExtResource( 165 )]
+
+[node name="natura_world_151" parent="WorldTerrain" instance=ExtResource( 166 )]
+
+[node name="natura_world_152" parent="WorldTerrain" instance=ExtResource( 170 )]
+
+[node name="natura_world_153" parent="WorldTerrain" instance=ExtResource( 167 )]
+
+[node name="natura_world_154" parent="WorldTerrain" instance=ExtResource( 168 )]
+
+[node name="natura_world_155" parent="WorldTerrain" instance=ExtResource( 169 )]
+
+[node name="natura_world_156" parent="WorldTerrain" instance=ExtResource( 171 )]
+
+[node name="natura_world_157" parent="WorldTerrain" instance=ExtResource( 173 )]
+
+[node name="natura_world_158" parent="WorldTerrain" instance=ExtResource( 174 )]
+
+[node name="natura_world_159" parent="WorldTerrain" instance=ExtResource( 172 )]
+
+[node name="natura_world_160" parent="WorldTerrain" instance=ExtResource( 175 )]
+
+[node name="natura_world_161" parent="WorldTerrain" instance=ExtResource( 231 )]
+
+[node name="natura_world_162" parent="WorldTerrain" instance=ExtResource( 212 )]
+
+[node name="natura_world_163" parent="WorldTerrain" instance=ExtResource( 221 )]
+
+[node name="natura_world_164" parent="WorldTerrain" instance=ExtResource( 205 )]
+
+[node name="natura_world_165" parent="WorldTerrain" instance=ExtResource( 224 )]
+
+[node name="natura_world_166" parent="WorldTerrain" instance=ExtResource( 232 )]
+
+[node name="natura_world_167" parent="WorldTerrain" instance=ExtResource( 202 )]
+
+[node name="natura_world_168" parent="WorldTerrain" instance=ExtResource( 206 )]
+
+[node name="natura_world_169" parent="WorldTerrain" instance=ExtResource( 225 )]
+
+[node name="natura_world_170" parent="WorldTerrain" instance=ExtResource( 208 )]
+
+[node name="natura_world_171" parent="WorldTerrain" instance=ExtResource( 183 )]
+
+[node name="natura_world_172" parent="WorldTerrain" instance=ExtResource( 210 )]
+
+[node name="natura_world_173" parent="WorldTerrain" instance=ExtResource( 207 )]
+
+[node name="natura_world_174" parent="WorldTerrain" instance=ExtResource( 222 )]
+
+[node name="natura_world_175" parent="WorldTerrain" instance=ExtResource( 184 )]
+
+[node name="natura_world_176" parent="WorldTerrain" instance=ExtResource( 227 )]
+
+[node name="natura_world_177" parent="WorldTerrain" instance=ExtResource( 209 )]
+
+[node name="natura_world_178" parent="WorldTerrain" instance=ExtResource( 211 )]
+
+[node name="natura_world_179" parent="WorldTerrain" instance=ExtResource( 213 )]
+
+[node name="natura_world_180" parent="WorldTerrain" instance=ExtResource( 214 )]
+
+[node name="natura_world_181" parent="WorldTerrain" instance=ExtResource( 226 )]
+
+[node name="natura_world_182" parent="WorldTerrain" instance=ExtResource( 215 )]
+
+[node name="natura_world_183" parent="WorldTerrain" instance=ExtResource( 190 )]
+
+[node name="natura_world_184" parent="WorldTerrain" instance=ExtResource( 228 )]
+
+[node name="natura_world_185" parent="WorldTerrain" instance=ExtResource( 192 )]
+
+[node name="natura_world_186" parent="WorldTerrain" instance=ExtResource( 217 )]
+
+[node name="natura_world_187" parent="WorldTerrain" instance=ExtResource( 193 )]
+
+[node name="natura_world_188" parent="WorldTerrain" instance=ExtResource( 216 )]
+
+[node name="natura_world_189" parent="WorldTerrain" instance=ExtResource( 223 )]
+
+[node name="natura_world_190" parent="WorldTerrain" instance=ExtResource( 233 )]
+
+[node name="natura_world_191" parent="WorldTerrain" instance=ExtResource( 198 )]
+
+[node name="natura_world_192" parent="WorldTerrain" instance=ExtResource( 235 )]
+
+[node name="natura_world_193" parent="WorldTerrain" instance=ExtResource( 185 )]
+
+[node name="natura_world_194" parent="WorldTerrain" instance=ExtResource( 218 )]
+
+[node name="natura_world_195" parent="WorldTerrain" instance=ExtResource( 229 )]
+
+[node name="natura_world_196" parent="WorldTerrain" instance=ExtResource( 234 )]
+
+[node name="natura_world_197" parent="WorldTerrain" instance=ExtResource( 191 )]
+
+[node name="natura_world_198" parent="WorldTerrain" instance=ExtResource( 219 )]
+
+[node name="natura_world_199" parent="WorldTerrain" instance=ExtResource( 189 )]
+
+[node name="natura_world_200" parent="WorldTerrain" instance=ExtResource( 220 )]
+
+[node name="natura_world_201" parent="WorldTerrain" instance=ExtResource( 236 )]
+
+[node name="natura_world_202" parent="WorldTerrain" instance=ExtResource( 199 )]
+
+[node name="natura_world_203" parent="WorldTerrain" instance=ExtResource( 200 )]
+
+[node name="natura_world_204" parent="WorldTerrain" instance=ExtResource( 230 )]
+
+[node name="natura_world_205" parent="WorldTerrain" instance=ExtResource( 182 )]
+
+[node name="natura_world_206" parent="WorldTerrain" instance=ExtResource( 186 )]
+
+[node name="natura_world_207" parent="WorldTerrain" instance=ExtResource( 187 )]
+
+[node name="natura_world_208" parent="WorldTerrain" instance=ExtResource( 188 )]
+
+[node name="natura_world_209" parent="WorldTerrain" instance=ExtResource( 194 )]
+
+[node name="natura_world_210" parent="WorldTerrain" instance=ExtResource( 195 )]
+
+[node name="natura_world_211" parent="WorldTerrain" instance=ExtResource( 196 )]
+
+[node name="natura_world_212" parent="WorldTerrain" instance=ExtResource( 197 )]
+
+[node name="natura_world_213" parent="WorldTerrain" instance=ExtResource( 201 )]
+
+[node name="natura_world_214" parent="WorldTerrain" instance=ExtResource( 203 )]
+
+[node name="natura_world_215" parent="WorldTerrain" instance=ExtResource( 204 )]
+
+[node name="natura_world_216" parent="WorldTerrain" instance=ExtResource( 256 )]
+
+[node name="natura_world_217" parent="WorldTerrain" instance=ExtResource( 245 )]
+
+[node name="natura_world_218" parent="WorldTerrain" instance=ExtResource( 242 )]
+
+[node name="natura_world_219" parent="WorldTerrain" instance=ExtResource( 257 )]
+
+[node name="natura_world_220" parent="WorldTerrain" instance=ExtResource( 255 )]
+
+[node name="natura_world_221" parent="WorldTerrain" instance=ExtResource( 258 )]
+
+[node name="natura_world_222" parent="WorldTerrain" instance=ExtResource( 246 )]
+
+[node name="natura_world_223" parent="WorldTerrain" instance=ExtResource( 259 )]
+
+[node name="natura_world_224" parent="WorldTerrain" instance=ExtResource( 249 )]
+
+[node name="natura_world_225" parent="WorldTerrain" instance=ExtResource( 241 )]
+
+[node name="natura_world_226" parent="WorldTerrain" instance=ExtResource( 251 )]
+
+[node name="natura_world_227" parent="WorldTerrain" instance=ExtResource( 240 )]
+
+[node name="natura_world_228" parent="WorldTerrain" instance=ExtResource( 243 )]
+
+[node name="natura_world_229" parent="WorldTerrain" instance=ExtResource( 250 )]
+
+[node name="natura_world_230" parent="WorldTerrain" instance=ExtResource( 237 )]
+
+[node name="natura_world_231" parent="WorldTerrain" instance=ExtResource( 238 )]
+
+[node name="natura_world_232" parent="WorldTerrain" instance=ExtResource( 239 )]
+
+[node name="natura_world_233" parent="WorldTerrain" instance=ExtResource( 248 )]
+
+[node name="natura_world_234" parent="WorldTerrain" instance=ExtResource( 244 )]
+
+[node name="natura_world_235" parent="WorldTerrain" instance=ExtResource( 247 )]
+
+[node name="natura_world_236" parent="WorldTerrain" instance=ExtResource( 252 )]
+
+[node name="natura_world_237" parent="WorldTerrain" instance=ExtResource( 253 )]
+
+[node name="natura_world_238" parent="WorldTerrain" instance=ExtResource( 254 )]
+
+[node name="natura_world_239" parent="WorldTerrain" instance=ExtResource( 3 )]
+
+[node name="natura_world_240" parent="WorldTerrain" instance=ExtResource( 8 )]
+
+[node name="natura_world_241" parent="WorldTerrain" instance=ExtResource( 4 )]
+
+[node name="natura_world_242" parent="WorldTerrain" instance=ExtResource( 7 )]
+
+[node name="natura_world_243" parent="WorldTerrain" instance=ExtResource( 5 )]
+
+[node name="natura_world_244" parent="WorldTerrain" instance=ExtResource( 6 )]
+
+[node name="natura_world_245" parent="WorldTerrain" instance=ExtResource( 1 )]
+
+[node name="natura_world_246" parent="WorldTerrain" instance=ExtResource( 2 )]
+
+[node name="natura_world_247" parent="WorldTerrain" instance=ExtResource( 14 )]
+
+[node name="natura_world_248" parent="WorldTerrain" instance=ExtResource( 16 )]
+
+[node name="natura_world_249" parent="WorldTerrain" instance=ExtResource( 15 )]
+
+[node name="natura_world_250" parent="WorldTerrain" instance=ExtResource( 17 )]
+
+[node name="natura_world_251" parent="WorldTerrain" instance=ExtResource( 13 )]
+
+[node name="natura_world_252" parent="WorldTerrain" instance=ExtResource( 9 )]
+
+[node name="natura_world_253" parent="WorldTerrain" instance=ExtResource( 10 )]
+
+[node name="natura_world_254" parent="WorldTerrain" instance=ExtResource( 11 )]
+
+[node name="natura_world_255" parent="WorldTerrain" instance=ExtResource( 12 )]
+
+[node name="WaterTerrain" type="Spatial" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.05, 0 )
+
+[node name="natura_water" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 0, -7.7, 0 )
+
+[node name="natura_water3" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 0, -7.7, -504.675 )
+
+[node name="natura_water2" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 0, -7.7, 500.618 )
+
+[node name="natura_water4" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, -490.941, -7.7, 0 )
+
+[node name="natura_water5" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, -490.941, -7.7, -504.675 )
+
+[node name="natura_water6" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, -490.941, -7.7, 500.618 )
+
+[node name="natura_water7" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, 0 )
+
+[node name="natura_water8" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, -504.675 )
+
+[node name="natura_water9" parent="WaterTerrain" instance=ExtResource( 18 )]
+transform = Transform( 256, 0, 0, 0, 256, 0, 0, 0, 256, 500.63, -7.7, 500.618 )
+
+[node name="Objects" type="Spatial" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="object_beehive_handmade" parent="Objects" instance=ExtResource( 263 )]
+transform = Transform( 0.671074, 0, -0.741391, 0, 1, 0, 0.741391, 0, 0.671074, 1.44505, 0.223914, 0 )
+
+[node name="object_tree_one" parent="Objects" instance=ExtResource( 260 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91635, 0.215577, 0 )
+
+[node name="object_tree_two" parent="Objects" instance=ExtResource( 261 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48971, 0, -1.95213 )
+
+[node name="object_tree_one2" parent="Objects" instance=ExtResource( 260 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52608, -0.215381, -1.42038 )
+
+[node name="object_apple" parent="Objects" instance=ExtResource( 262 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41054, 0.2854, 0 )
+
+[node name="object_axe" parent="Objects" instance=ExtResource( 264 )]
+transform = Transform( 0.407624, 0.13368, -0.256851, 0.276857, -0.050026, 0.413337, 0.0848111, -0.479194, -0.114804, 0.626871, 0.312271, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.99242, 0.122891, 0, -0.122891, 0.99242, 0, 4.46856, 8.11819 )
