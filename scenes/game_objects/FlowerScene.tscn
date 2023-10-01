@@ -1,10 +1,53 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/game_objects/FlowerScene.gd" type="Script" id=1]
 [ext_resource path="res://3d/game_objects/object_flowers.glb" type="PackedScene" id=2]
+[ext_resource path="res://3d/game_objects/object_blossom.glb" type="PackedScene" id=3]
+[ext_resource path="res://3d/game_objects/object_berry.glb" type="PackedScene" id=4]
 
-[node name="Flower" type="Spatial"]
+[sub_resource type="SphereShape" id=1]
+radius = 0.25
+
+[node name="Flower" type="StaticBody"]
 script = ExtResource( 1 )
 
 [node name="object_flowers" parent="." instance=ExtResource( 2 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="Blossoms" type="Spatial" parent="."]
+
+[node name="object_blossom" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.073976, 0.878305, 0.0601648 )
+
+[node name="object_blossom2" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.205321, 0.628586, 0.0601648 )
+
+[node name="object_blossom3" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0340106, 0.628586, -0.254053 )
+
+[node name="object_blossom4" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.434618, 0.628586, -0.0745097 )
+
+[node name="object_blossom5" parent="Blossoms" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.163135, 0.628586, 0.266451 )
+
+[node name="Fruits" type="Spatial" parent="."]
+
+[node name="object_berry" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.074, 0.878, 0.06 )
+
+[node name="object_berry2" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.205, 0.629, 0.06 )
+
+[node name="object_berry3" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.034, 0.629, -0.254 )
+
+[node name="object_berry4" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.435, 0.629, -0.075 )
+
+[node name="object_berry5" parent="Fruits" instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0.163, 0.629, 0.266 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.409838, 0 )
+shape = SubResource( 1 )

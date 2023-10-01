@@ -16,6 +16,8 @@ onready var axe = $PlayerHead/PlayerHands/Axe
 # UI
 onready var player_ui = $UI/PlayerUI
 onready var tooltip = $UI/PlayerUI/Tooltip
+onready var action_tooltip = $UI/PlayerUI/ActionTooltip/ActionLabel
+
 onready var season_sprite = $UI/PlayerUI/SeasonUINode/SeasonSprite
 
 onready var inventory = $UI/PlayerUI/Inventory
@@ -40,13 +42,6 @@ onready var world_flowers = $"../GameObjects/Flowers"
 onready var world_trees = $"../GameObjects/Trees"
 onready var world_fireplaces = $"../GameObjects/Fireplaces"
 onready var world_shelters = $"../GameObjects/Shelters"
-
-
-
-
-
-
-
 
 var is_game_over = false
 var is_game_won = false
@@ -81,8 +76,8 @@ var current_inventory_item = 2
 var observed_object = "" 
 
 # Amounts of items and food
-var flower_seeds = 20
-var tree_seeds = 6
+var flower_seeds = 10
+var tree_seeds = 3
 var wood_amount = 4
 
 var honey_amount = 2
@@ -139,6 +134,8 @@ func _process(delta):
 	update_info_ui()
 	adjust_placing_node()
 	
+	action_tooltip.text = ""
+	
 	# If player is looking at something
 	if ray.is_colliding():
 		var collision_object = ray.get_collider().name
@@ -146,6 +143,15 @@ func _process(delta):
 		if collision_object != observed_object:
 			observed_object = collision_object
 			print("Player is looking at: " + observed_object + ".")
+			
+		# Player is looking at ripe fruit
+		var colliding_object = ray.get_collider()
+		if colliding_object.has_method("collect_berry"):
+			if colliding_object.ripe_fruit > 0:
+				action_tooltip.text = colliding_object.tooltip
+				if Input.is_action_just_pressed("eat_action"):
+					colliding_object.collect_berry()
+					berries_amount += 1
 	else:
 		var collision_object = "nothing"
 		if collision_object != observed_object:
