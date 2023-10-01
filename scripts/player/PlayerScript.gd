@@ -38,7 +38,7 @@ onready var apple_label = $UI/PlayerUI/InfoUI/AppleLabel
 # Placing node
 onready var placing_node = $UI/PlacingNode
 
-onready var preview_handmade_beehive = $UI/PlacingNode/HandmadeBeehive
+onready var preview_handmade_beehive = $UI/PlacingNode/BeehivePreview
 onready var preview_flowers = $UI/PlacingNode/Flowers
 onready var preview_fireplace = $UI/PlacingNode/Fireplace
 onready var preview_shelter = $UI/PlacingNode/ShelterPreview

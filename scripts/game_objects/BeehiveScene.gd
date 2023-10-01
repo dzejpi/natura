@@ -1,7 +1,9 @@
 extends Spatial
 
 
-var honey_grams = 0
+onready var bees_parent = $"../../Bees"
+
+var honey_grams = 9
 var tooltip = ""
 
 
@@ -10,7 +12,9 @@ func _ready():
 
 
 func _process(_delta):
-	pass
+	if honey_grams >= 10:
+		honey_grams -= 10
+		spawn_new_bee()
 
 
 func get_honey():
@@ -19,3 +23,10 @@ func get_honey():
 	tooltip = "Collect honey"
 	
 	return honey_amount
+
+func spawn_new_bee():
+	var new_bee = preload("res://scenes/game_objects/BeeScene.tscn").instance()
+	bees_parent.add_child(new_bee)
+	
+	new_bee.transform.origin = global_transform.origin
+	

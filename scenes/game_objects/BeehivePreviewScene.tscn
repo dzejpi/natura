@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://3d/game_objects/object_beehive_handmade.glb" type="PackedScene" id=1]
+
+[node name="BeehivePreview" type="Spatial"]
+
+[node name="object_beehive_handmade" parent="." instance=ExtResource( 1 )]
