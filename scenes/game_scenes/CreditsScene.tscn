@@ -26,8 +26,9 @@ position = Vector2( 800, 640 )
 
 [node name="BackToMenuButton" type="TextureButton" parent="CreditsButton"]
 margin_left = -128.0
+margin_top = 48.0
 margin_right = 128.0
-margin_bottom = 64.0
+margin_bottom = 112.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 6 )
@@ -48,12 +49,19 @@ __meta__ = {
 
 [node name="CreditsTextLabel" type="Label" parent="."]
 margin_left = 64.0
-margin_top = 64.0
+margin_top = 112.0
 margin_right = 1536.0
-margin_bottom = 528.0
+margin_bottom = 624.0
+custom_colors/font_color = Color( 0.0941176, 0.0784314, 0.145098, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Thank you for playing!
-Created for Ludum Dare by DzejPi."
+text = "Thank you very much for playing, stranger!
+Created for Ludum Dare #54 by DzejPi.
+
+Shout out to my family & friends. You know who you are.
+I wouldn't be who I am without you. Thank you!
+
+Dedicated to my mom. 
+Miss you evey day. <3"
 align = 1
 valign = 1
 
