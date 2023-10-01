@@ -1113,6 +1113,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0012, -3.04652, -51.339 )
 [node name="Shelters" type="Spatial" parent="GameObjects"]
 
 [node name="Woodenplanks" type="Spatial" parent="GameObjects"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.32657 )
 
 [node name="Woodenplank" parent="GameObjects/Woodenplanks" instance=ExtResource( 270 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42059, -3.36486 )

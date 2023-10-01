@@ -5,7 +5,7 @@ onready var blossoms = $Blossoms
 onready var apples = $Fruits
 
 onready var season_management_node = $"../../../SeasonManagementNode"
-onready var woodenplanks = $"../../Woodenplanks"
+onready var wooden_planks = $"../../Woodenplanks"
 
 
 var pollen_left = 5
@@ -13,6 +13,10 @@ var is_fruit_ripe = false
 var ripe_fruit = 5
 var current_season = 0
 var tooltip = ""
+
+var objects_to_generate = 3
+var x_offset_range = 3.5
+var z_offset_range = 3.5
 
 
 func _ready():
@@ -71,4 +75,13 @@ func collect_apple():
 
 
 func generate_planks():
-	pass
+	for i in range(objects_to_generate):
+		var original_position = self.global_transform.origin
+		
+		var x_offset = rand_range(-x_offset_range, x_offset_range)
+		var z_offset = rand_range(-z_offset_range, z_offset_range)
+		
+		var new_plank = preload("res://scenes/game_objects/WoodenPlankScene.tscn").instance()
+		
+		wooden_planks.add_child(new_plank)
+		new_plank.transform.origin = original_position + Vector3(x_offset, 0.5, z_offset)
