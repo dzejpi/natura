@@ -6,7 +6,7 @@ onready var player = $"../Player"
 var ground_material = preload("res://3d/world/export_triangulated/ground_material.material")
 
 # Colors had to be divided by 255 and then rounded to two decimals for this to work for some reason
-var spring_ground_color = Color(0.72, 0.44, 0.31)
+var spring_ground_color = Color(0.89, 0.65, 0.45)
 var summer_ground_color = Color(0.24, 0.54, 0.28)
 var autumn_ground_color = Color(1.00, 0.68, 0.20)
 var winter_ground_color = Color(1.00, 1.00, 1.00)
