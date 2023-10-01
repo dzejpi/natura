@@ -83,17 +83,17 @@ var current_inventory_item = 2
 var observed_object = "" 
 
 # Amounts of items and food
-var flower_seeds = 10
-var tree_seeds = 3
-var wood_amount = 4
+var flower_seeds = 2
+var tree_seeds = 1
+var wood_amount = 0
 
-var honey_amount = 2
-var berries_amount = 4
-var apple_amount = 6
+var honey_amount = 0
+var berries_amount = 0
+var apple_amount = 0
 
-var honey_health = 20
-var berries_health = 10
-var apple_health = 10
+var honey_health = 0.75
+var berries_health = 0.2
+var apple_health = 0.5
 
 var player_health = 100
 
@@ -216,7 +216,7 @@ func _process(delta):
 					
 					# Get flower seeds
 					var random_value = randf()
-					if random_value <= 0.5:
+					if random_value <= 0.25:
 						flower_seeds += 1
 		
 		# Player is looking at apples
@@ -229,7 +229,7 @@ func _process(delta):
 					
 					# Get tree seeds
 					var random_value = randf()
-					if random_value <= 0.25:
+					if random_value <= 0.2:
 						tree_seeds += 1
 		
 		# Player is looking at beehive
@@ -405,20 +405,20 @@ func check_inventory_changes():
 				else:
 					inventory.button_three_label.text = "No tree saplings"
 			4:
-				if wood_amount > 0:
+				if wood_amount >= 2:
 					inventory.button_four_label.text = "Build fireplace"
 				else:
-					inventory.button_four_label.text = "Not enough wood (1) for fireplace"
+					inventory.button_four_label.text = "Not enough wood (2) for fireplace"
 			5:
-				if wood_amount >= 2:
+				if wood_amount >= 4:
 					inventory.button_five_label.text = "Build beehive"
 				else:
-					inventory.button_five_label.text = "Not enough wood (2) for beehive"
+					inventory.button_five_label.text = "Not enough wood (4) for beehive"
 			6:
-				if wood_amount >= 4:
+				if wood_amount >= 8:
 					inventory.button_six_label.text = "Build shelter"
 				else:
-					inventory.button_six_label.text = "Not enough wood (4) for shelter"
+					inventory.button_six_label.text = "Not enough wood (8) for shelter"
 			7:
 				if honey_amount > 0:
 					inventory.button_seven_label.text = "Eat honey"
@@ -503,17 +503,17 @@ func adjust_placing_node():
 				else:
 					placing_node.hide()
 			4:
-				if wood_amount > 0:
+				if wood_amount >= 2:
 					preview_fireplace.show()
 				else:
 					placing_node.hide()
 			5:
-				if wood_amount >= 2:
+				if wood_amount >= 4:
 					preview_handmade_beehive.show()
 				else:
 					placing_node.hide()
 			6:
-				if wood_amount >= 4:
+				if wood_amount >= 8:
 					preview_shelter.show()
 				else:
 					placing_node.hide()
@@ -548,8 +548,8 @@ func process_click_action():
 				#inventory.selected_item = 0
 				#inventory.change_selection()
 		4:
-			if wood_amount > 0:
-				wood_amount -= 1
+			if wood_amount >= 2:
+				wood_amount -= 2
 				
 				var instance_fireplace = preload("res://scenes/game_objects/FireplaceScene.tscn").instance()
 				world_fireplaces.add_child(instance_fireplace)
@@ -558,8 +558,8 @@ func process_click_action():
 				inventory.selected_item = 0
 				inventory.change_selection()
 		5:
-			if wood_amount >= 2:
-				wood_amount -= 2
+			if wood_amount >= 4:
+				wood_amount -= 4
 				
 				var instance_beehive = preload("res://scenes/game_objects/HandmadeBeehiveScene.tscn").instance()
 				world_beehives.add_child(instance_beehive)
@@ -568,8 +568,8 @@ func process_click_action():
 				inventory.selected_item = 0
 				inventory.change_selection()
 		6:
-			if wood_amount >= 4:
-				wood_amount -= 4
+			if wood_amount >= 8:
+				wood_amount -= 8
 				
 				var instance_shelter = preload("res://scenes/game_objects/ShelterScene.tscn").instance()
 				world_shelters.add_child(instance_shelter)

@@ -14,7 +14,7 @@ var ripe_fruit = 5
 var current_season = 0
 var tooltip = ""
 
-var objects_to_generate = 3
+var objects_to_generate = 1
 var x_offset_range = 3.5
 var z_offset_range = 3.5
 
