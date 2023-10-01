@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_axe_swing.mp3-25ae19eb0f94eedeb4a703775d72e3fc.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/sfx_axe_swing.mp3"
+dest_files=[ "res://.import/sfx_axe_swing.mp3-25ae19eb0f94eedeb4a703775d72e3fc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

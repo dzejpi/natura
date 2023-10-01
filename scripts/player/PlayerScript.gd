@@ -129,6 +129,7 @@ func _input(event):
 		direction.x = -Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
 		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
 		
+		
 	# Handling the options menu
 	if Input.is_action_just_pressed("game_pause"):
 		if !is_game_over && !is_game_won:
@@ -228,6 +229,7 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_berry()
+					global_var.play_sound("sfx_pickup")
 					berries_amount += 5
 					
 					# Get flower seeds
@@ -241,6 +243,7 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_apple()
+					global_var.play_sound("sfx_pickup")
 					apple_amount += 5
 					
 					# Get tree seeds
@@ -254,6 +257,7 @@ func _process(delta):
 				action_tooltip.text = colliding_object.tooltip
 				if Input.is_action_just_pressed("eat_action"):
 					honey_amount += colliding_object.get_honey()
+					global_var.play_sound("sfx_pickup")
 					
 		# Player is looking at plank
 		if colliding_object.has_method("collect_plank") && current_inventory_item == 1:
@@ -281,6 +285,7 @@ func _physics_process(delta):
 		process_click_hold_action()
 	
 	if is_on_floor():
+		
 		gravity_vector = -get_floor_normal() * slide_prevention
 		acceleration = ground_acceleration
 		if !is_on_ground:
@@ -317,6 +322,7 @@ func _physics_process(delta):
 		if direction != Vector3():
 			if !(animation_player.current_animation == "Axe Swing"):
 				animation_player.play("Head Bob")
+				
 	
 	#if Input.is_action_just_pressed("ui_status"):
 	#	info_ui.show()
@@ -612,6 +618,7 @@ func process_click_action():
 			if berries_amount > 0:
 				if player_health <= 99:
 					berries_amount -= 1
+					
 					player_health += berries_health
 				
 				if player_health >= 100:
