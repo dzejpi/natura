@@ -48,6 +48,12 @@ func find_closest_tree():
 
 func find_closest_shelter():
 	var children = shelters.get_children()
+	var children_count = shelters.get_child_count()
+	
+	# Die if there is no shelter in winter
+	if children_count == 0:
+		queue_free()
+	
 	var closest_distance = 20000
 
 	for child in children:
