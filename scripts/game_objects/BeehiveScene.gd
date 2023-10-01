@@ -3,7 +3,7 @@ extends Spatial
 
 onready var bees_parent = $"../../Bees"
 
-var honey_grams = 9
+var honey_grams = 0
 var tooltip = ""
 
 
