@@ -64,7 +64,7 @@ func fly_towards_tree(delta):
 	else:
 		var direction = current_target.global_transform.origin - global_transform.origin
 		
-		# Move the bee
+		# Move the butterfly
 		if direction.length() < 0.2:
 			if butterfly_countdown > 0:
 				butterfly_countdown -= 1 * delta
@@ -84,10 +84,13 @@ func fly_towards_shelter(delta):
 	if !is_closest_shelter_found:
 		find_closest_shelter()
 	else:
-		var direction = current_target.global_transform.origin - global_transform.origin
+		var target_position = current_target.global_transform.origin
+		target_position.y -= 4
 		
-		# Move the bee
-		if direction.length() < 0.2:
+		var direction = target_position - global_transform.origin
+				
+		# Move the butterfly
+		if direction.length() < 0.05:
 			if butterfly_countdown > 0:
 				butterfly_countdown -= 1 * delta
 			else:
@@ -96,7 +99,7 @@ func fly_towards_shelter(delta):
 				if current_target:
 					is_closest_shelter_found = false
 		else:
-			look_at(current_target.global_transform.origin, Vector3(0, 1, 0))
+			look_at(target_position, Vector3(0, 1, 0))
 			translate(Vector3(0, 0, -butterfly_speed * delta))
 
 
