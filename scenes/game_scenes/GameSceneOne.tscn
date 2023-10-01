@@ -1075,7 +1075,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9394, 17.577, -35.5175 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1262, 3.52532, -0.678342 )
 
 [node name="NaturalBeehive2" parent="GameObjects/Beehives" instance=ExtResource( 265 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.51, 1.2883, 40.8597 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.51, 1.93398, 40.8597 )
 
 [node name="Flowers" type="Spatial" parent="GameObjects"]
 
@@ -1088,7 +1088,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158961, -14.0116 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5689, -0.159666, 0 )
 
 [node name="TreeOne3" parent="GameObjects/Trees" instance=ExtResource( 268 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5684, -2.54532, 38.8814 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5684, -1.89964, 38.8814 )
 
 [node name="Fireplaces" type="Spatial" parent="GameObjects"]
 
