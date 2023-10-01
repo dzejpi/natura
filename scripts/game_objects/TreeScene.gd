@@ -34,7 +34,6 @@ func change_season(season):
 	match season:
 		# Spring
 		0:
-			show()
 			blossoms.show()
 			apples.hide()
 			tooltip = ""
@@ -54,7 +53,6 @@ func change_season(season):
 			ripe_fruit = 5
 		# Winter
 		3:
-			hide()
 			generate_planks()
 			blossoms.hide()
 			apples.hide()
