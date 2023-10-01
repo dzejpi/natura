@@ -21,7 +21,7 @@ func _ready():
 	
 	var random_value = randf()
 	print("Random value is: " + String(random_value))
-	if random_value <= 0.25:
+	if random_value <= 0.33:
 		spawn_butterfly()
 
 
