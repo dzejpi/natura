@@ -37,7 +37,7 @@ func _ready():
 
 
 func _process(_delta):
-	if Input.is_mouse_button_pressed(BUTTON_RIGHT):
+	if Input.is_mouse_button_pressed(BUTTON_RIGHT) or Input.is_action_pressed("inventory_display"):
 		if position.x > revealed_x:
 			position.x -= reveal_speed
 	else:
