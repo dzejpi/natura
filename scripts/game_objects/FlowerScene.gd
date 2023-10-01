@@ -5,6 +5,7 @@ onready var blossoms = $Blossoms
 onready var fruits = $Fruits
 
 onready var season_management_node = $"../../../SeasonManagementNode"
+onready var butterflies_parent = $"../../Butterflies"
 
 var pollen_left = 5
 var is_flower = true
@@ -17,6 +18,11 @@ var tooltip = ""
 func _ready():
 	current_season = season_management_node.current_season
 	change_season(season_management_node.current_season)
+	
+	var random_value = randf()
+	print("Random value is: " + String(random_value))
+	if random_value <= 0.25:
+		spawn_butterfly()
 
 
 func _process(_delta):
@@ -68,3 +74,11 @@ func collect_berry():
 		fruits.hide()
 	
 	return berries_collected
+
+
+func spawn_butterfly():
+	var new_butterfly = preload("res://scenes/game_objects/ButterflyScene.tscn").instance()
+	
+	butterflies_parent.add_child(new_butterfly)
+	new_butterfly.transform.origin = global_transform.origin
+	new_butterfly.transform.origin.y += 2

@@ -149,7 +149,7 @@ func _process(delta):
 		
 		if collision_object != observed_object:
 			observed_object = collision_object
-			print("Player is looking at: " + observed_object + ".")
+			#print("Player is looking at: " + observed_object + ".")
 			
 		var colliding_object = ray.get_collider()
 		# Player is looking at berries

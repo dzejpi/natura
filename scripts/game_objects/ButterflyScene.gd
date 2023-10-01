@@ -20,6 +20,7 @@ var current_season = 0
 
 
 func _ready():
+	print("I'm a new butterfly! My position is: " + String(global_transform.origin))
 	current_season = season_management_node.current_season
 	butterfly_animation_player.play("fly")
 
