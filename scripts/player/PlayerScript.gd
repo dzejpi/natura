@@ -99,6 +99,9 @@ var player_health = 100
 var total_bee_count = 0
 var seconds_elapsed = 0
 
+var is_walking = false
+var is_walking_being_played = false
+
 
 func _ready():
 	is_paused = false
@@ -129,6 +132,17 @@ func _input(event):
 		direction.x = -Input.get_action_strength("move_left") + Input.get_action_strength("move_right")
 		direction = direction.normalized().rotated(Vector3.UP, rotation.y)
 		
+		if Input.is_action_pressed("move_up"):
+			if !is_walking:
+				is_walking = true
+				if !is_walking_being_played:
+					is_walking_being_played = true
+					global_var.play_sound("sfx_walk")
+		else:
+			is_walking = false
+			if is_walking_being_played:
+				is_walking_being_played = false
+				global_var.stop_sound("sfx_walk")
 		
 	# Handling the options menu
 	if Input.is_action_just_pressed("game_pause"):
@@ -326,7 +340,7 @@ func _physics_process(delta):
 		if direction != Vector3():
 			if !(animation_player.current_animation == "Axe Swing"):
 				animation_player.play("Head Bob")
-				
+	
 	
 	#if Input.is_action_just_pressed("ui_status"):
 	#	info_ui.show()
