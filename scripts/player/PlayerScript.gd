@@ -283,6 +283,7 @@ func check_inventory_changes():
 		current_inventory_item = inventory.selected_item
 		
 		axe.hide()
+		tooltip.disable_tooltip()
 		
 		match(current_inventory_item):
 			0:
@@ -374,15 +375,30 @@ func adjust_placing_node():
 		
 		match current_inventory_item:
 			2:
-				preview_flowers.show()
+				if flower_seeds > 0:
+					preview_flowers.show()
+				else:
+					placing_node.hide()
 			3:
-				preview_tree_one.show()
+				if tree_seeds > 0:
+					preview_tree_one.show()
+				else:
+					placing_node.hide()
 			4:
-				preview_fireplace.show()
+				if wood_amount > 0:
+					preview_fireplace.show()
+				else:
+					placing_node.hide()
 			5:
-				preview_handmade_beehive.show()
+				if wood_amount >= 2:
+					preview_handmade_beehive.show()
+				else:
+					placing_node.hide()
 			6:
-				preview_shelter.show()
+				if wood_amount >= 4:
+					preview_shelter.show()
+				else:
+					placing_node.hide()
 	else:
 		placing_node.hide()
 	
