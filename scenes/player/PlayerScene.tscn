@@ -111,7 +111,7 @@ anims/RESET = SubResource( 3 )
 
 [node name="RayCast" type="RayCast" parent="PlayerHead"]
 enabled = true
-cast_to = Vector3( 0, 0, -3 )
+cast_to = Vector3( 0, 0, -5 )
 collide_with_areas = true
 
 [node name="PlayerHands" type="Spatial" parent="PlayerHead"]
