@@ -15,4 +15,5 @@ func _process(_delta):
 func _on_NewGameButton_pressed():
 	button_pressed = true
 	global_var.endless_game = false
+	global_var.play_sound("sfx_select")
 	transition_overlay.fade_in()

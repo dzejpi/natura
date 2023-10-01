@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sfx_axe_swing.mp3-25ae19eb0f94eedeb4a703775d72e3fc.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -13,5 +13,6 @@ func _process(_delta):
 
 
 func _on_CreditsButton_pressed():
+	global_var.play_sound("sfx_select")
 	button_pressed = true
 	transition_overlay.fade_in()

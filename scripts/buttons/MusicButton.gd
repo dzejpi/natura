@@ -21,6 +21,7 @@ func _ready():
 
 
 func _on_MusicButton_pressed():
+	global_var.play_sound("sfx_select")
 	if music_on:
 		music_on = false
 		music_label.text = "Music: off"

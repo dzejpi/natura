@@ -17,4 +17,5 @@ func _process(delta):
 
 
 func _on_BackToMenuButton_pressed():
+	global_var.play_sound("sfx_select")
 	button_pressed = true
