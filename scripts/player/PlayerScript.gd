@@ -152,6 +152,11 @@ func _process(delta):
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_berry()
 					berries_amount += 1
+					
+					# Get flower seeds
+					var random_value = randf()
+					if random_value <= 0.5:
+						flower_seeds += 1
 		
 		# Player is looking at apples
 		if colliding_object.has_method("collect_apple"):
@@ -160,6 +165,11 @@ func _process(delta):
 				if Input.is_action_just_pressed("eat_action"):
 					colliding_object.collect_apple()
 					apple_amount += 1
+					
+					# Get tree seeds
+					var random_value = randf()
+					if random_value <= 0.25:
+						tree_seeds += 1
 		
 		# Player is looking at beehive
 		if colliding_object.has_method("get_honey"):

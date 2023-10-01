@@ -2,6 +2,8 @@ extends KinematicBody
 
 
 onready var butterfly_animation_player = $ButterflyAnimationPlayer
+onready var trees_parent = $"../../Trees"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
