@@ -92,8 +92,8 @@ var berries_amount = 4
 var apple_amount = 6
 
 var honey_health = 20
-var berries_health = 20
-var apple_health = 20
+var berries_health = 10
+var apple_health = 10
 
 var player_health = 100
 
@@ -191,7 +191,7 @@ func _process(delta):
 	manage_hunger(delta)
 	update_info_ui()
 	adjust_placing_node()
-	
+		
 	action_tooltip.text = ""
 	
 	# If player is looking at something
@@ -579,6 +579,9 @@ func process_click_action():
 				honey_amount -= 1
 				player_health += honey_health
 				
+				if player_health >= 100:
+					player_health = 100
+				
 				tooltip.disable_tooltip()
 				#inventory.selected_item = 0
 				#inventory.change_selection()
@@ -587,6 +590,9 @@ func process_click_action():
 				berries_amount -= 1
 				player_health += berries_health
 				
+				if player_health >= 100:
+					player_health = 100
+				
 				tooltip.disable_tooltip()
 				#inventory.selected_item = 0
 				#inventory.change_selection()
@@ -594,6 +600,9 @@ func process_click_action():
 			if apple_amount > 0:
 				apple_amount -= 1
 				player_health += apple_health
+				
+				if player_health >= 100:
+					player_health = 100
 				
 				tooltip.disable_tooltip()
 				#inventory.selected_item = 0
