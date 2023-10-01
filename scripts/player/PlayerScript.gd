@@ -23,10 +23,17 @@ onready var season_sprite = $UI/PlayerUI/SeasonUINode/SeasonSprite
 onready var inventory = $UI/PlayerUI/Inventory
 
 onready var info_ui = $UI/PlayerUI/InfoUI
-onready var food_label = $UI/PlayerUI/InfoUI/FoodLabel
-onready var seeds_label = $UI/PlayerUI/InfoUI/SeedsLabel
 onready var wood_plank_label = $UI/PlayerUI/InfoUI/WoodPlankLabel
 onready var health_label = $UI/PlayerUI/InfoUI/HealthLabel
+onready var health_amount_label = $UI/PlayerUI/InfoUI/HealthAmountLabel
+onready var wood_plank_label_2 = $UI/PlayerUI/InfoUI/WoodPlankLabel2
+onready var wood_plank_label_3 = $UI/PlayerUI/InfoUI/WoodPlankLabel3
+onready var tree_seeds_label = $UI/PlayerUI/InfoUI/TreeSeedsLabel
+onready var flower_seeds_label = $UI/PlayerUI/InfoUI/FlowerSeedsLabel
+onready var honey_label = $UI/PlayerUI/InfoUI/HoneyLabel
+onready var berry_label = $UI/PlayerUI/InfoUI/BerryLabel
+onready var apple_label = $UI/PlayerUI/InfoUI/AppleLabel
+
 
 # Placing node
 onready var placing_node = $UI/PlacingNode
@@ -88,7 +95,7 @@ var honey_health = 20
 var berries_health = 20
 var apple_health = 20
 
-var player_health = 50
+var player_health = 100
 
 
 func _ready():
@@ -102,7 +109,7 @@ func _ready():
 	check_game_end()
 	check_inventory_changes()
 	tooltip.set_tooltip("Walk with [WASD]", "move_up")
-	info_ui.hide()
+	#info_ui.hide()
 
 
 func _input(event):	
@@ -233,11 +240,11 @@ func _physics_process(delta):
 		if direction != Vector3():
 			animation_player.play("Head Bob")
 	
-	if Input.is_action_just_pressed("ui_status"):
-		info_ui.show()
+	#if Input.is_action_just_pressed("ui_status"):
+	#	info_ui.show()
 		
-	if Input.is_action_just_released("ui_status"):
-		info_ui.hide()
+	#if Input.is_action_just_released("ui_status"):
+	#	info_ui.hide()
 
 
 func check_pause_update():
@@ -342,17 +349,17 @@ func check_inventory_changes():
 				if wood_amount > 0:
 					inventory.button_four_label.text = "Build fireplace"
 				else:
-					inventory.button_four_label.text = "Not enough wood for fireplace"
+					inventory.button_four_label.text = "Not enough wood (1) for fireplace"
 			5:
 				if wood_amount >= 2:
 					inventory.button_five_label.text = "Build beehive"
 				else:
-					inventory.button_five_label.text = "Not enough wood for beehive"
+					inventory.button_five_label.text = "Not enough wood (2) for beehive"
 			6:
 				if wood_amount >= 4:
 					inventory.button_six_label.text = "Build shelter"
 				else:
-					inventory.button_six_label.text = "Not enough wood for shelter"
+					inventory.button_six_label.text = "Not enough wood (4) for shelter"
 			7:
 				if honey_amount > 0:
 					inventory.button_seven_label.text = "Eat honey"
@@ -377,22 +384,37 @@ func check_inventory_changes():
 
 
 func update_info_ui():
-	food_label.text = String(honey_amount) + " jars of honey, " + String(apple_amount) + " apples, " + String(berries_amount) + " berries"
-	seeds_label.text = String(flower_seeds) + " flower seeds, " + String(tree_seeds) + " tree saplings"
-	wood_plank_label.text = String(wood_amount) + " wood planks"
+	
+	flower_seeds_label.text = String(flower_seeds)
+	tree_seeds_label.text = String(tree_seeds)
+	
+	wood_plank_label.text = String(wood_amount)
+	wood_plank_label_2.text = String(wood_amount)
+	wood_plank_label_3.text = String(wood_amount)
+	
+	honey_label.text = String(honey_amount)
+	berry_label.text = String(berries_amount)
+	apple_label.text = String(apple_amount)
+	
 	
 	if player_health > 80:
-		health_label.text = "Well fed" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Well fed"
+		health_amount_label.text = String(round(player_health))
 	elif player_health > 60:
-		health_label.text = "Slightly hungry" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Slightly hungry"
+		health_amount_label.text = String(round(player_health))
 	elif player_health > 40:
-		health_label.text = "Hungry" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Hungry"
+		health_amount_label.text = String(round(player_health))
 	elif player_health > 20:
-		health_label.text = "Very hungry" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Very hungry"
+		health_amount_label.text = String(round(player_health))
 	elif player_health > 10:
-		health_label.text = "Starving" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Starving"
+		health_amount_label.text = String(round(player_health))
 	else:
-		health_label.text = "Starving to death" + " (" + String(round(player_health)) + "%)"
+		health_label.text = "Starving to death"
+		health_amount_label.text = String(round(player_health))
 
 
 func manage_hunger(delta):

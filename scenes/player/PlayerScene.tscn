@@ -86,11 +86,11 @@ size = 42
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 36
+size = 24
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 36
+size = 24
 font_data = ExtResource( 11 )
 
 [node name="Player" type="KinematicBody"]
@@ -336,40 +336,139 @@ text = "You don't have any apples"
 align = 2
 valign = 1
 
+[node name="ButtonTen" type="TextureButton" parent="UI/PlayerUI/Inventory"]
+margin_top = 328.0
+margin_right = 48.0
+margin_bottom = 376.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
+
 [node name="InfoUI" type="Node2D" parent="UI/PlayerUI"]
 position = Vector2( 32, 868 )
 
-[node name="FoodLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
-margin_left = 1.0
-margin_top = -50.0
-margin_right = 673.0
-margin_bottom = -2.0
-custom_fonts/font = SubResource( 6 )
-text = "99 apples, 99 berries, 99 honey jars"
-
-[node name="SeedsLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
-margin_left = 1.0
-margin_top = -98.0
-margin_right = 673.0
-margin_bottom = -50.0
-custom_fonts/font = SubResource( 6 )
-text = "2 flower seeds, 2 tree saplings"
-
 [node name="WoodPlankLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
-margin_left = 1.0
-margin_top = -146.0
-margin_right = 673.0
-margin_bottom = -98.0
+margin_left = 1504.0
+margin_top = -474.0
+margin_right = 1552.0
+margin_bottom = -426.0
 custom_fonts/font = SubResource( 6 )
-text = "6 wood planks"
+text = "99"
+align = 1
+valign = 1
+
+[node name="WoodPlankLabel2" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -410.0
+margin_right = 1552.0
+margin_bottom = -362.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="WoodPlankLabel3" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -346.0
+margin_right = 1552.0
+margin_bottom = -298.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
 
 [node name="HealthLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
-margin_left = 1.0
-margin_top = -195.0
-margin_right = 673.0
-margin_bottom = -147.0
+margin_left = 816.0
+margin_top = -90.0
+margin_right = 1488.0
+margin_bottom = -42.0
 custom_fonts/font = SubResource( 6 )
 text = "Well fed"
+align = 2
+valign = 1
+
+[node name="TreeSeedsLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -538.0
+margin_right = 1552.0
+margin_bottom = -490.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="FlowerSeedsLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -602.0
+margin_right = 1552.0
+margin_bottom = -554.0
+rect_pivot_offset = Vector2( 64, 0 )
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="HoneyLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -282.0
+margin_right = 1552.0
+margin_bottom = -234.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="BerryLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -218.0
+margin_right = 1552.0
+margin_bottom = -170.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="AppleLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -154.0
+margin_right = 1552.0
+margin_bottom = -106.0
+custom_fonts/font = SubResource( 6 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="HealthAmountLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -90.0
+margin_right = 1552.0
+margin_bottom = -42.0
+custom_fonts/font = SubResource( 6 )
+text = "100"
+align = 1
+valign = 1
+
+[node name="AxeLabel" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -666.0
+margin_right = 1552.0
+margin_bottom = -618.0
+rect_pivot_offset = Vector2( 24, 30 )
+custom_fonts/font = SubResource( 6 )
+text = "|>"
+align = 1
+valign = 1
+
+[node name="FlowerSeedsLabel2" type="Label" parent="UI/PlayerUI/InfoUI"]
+margin_left = 1504.0
+margin_top = -730.0
+margin_right = 1552.0
+margin_bottom = -682.0
+rect_pivot_offset = Vector2( 64, 0 )
+custom_fonts/font = SubResource( 6 )
+text = "-"
+align = 1
+valign = 1
 
 [node name="PlacingNode" type="Spatial" parent="UI"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
